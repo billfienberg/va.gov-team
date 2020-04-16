@@ -1,0 +1,4 @@
+root: ./platform
+
+structure:  
+    readme: ./platform/README.md
