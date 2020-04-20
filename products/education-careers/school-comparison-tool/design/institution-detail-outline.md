@@ -4,7 +4,7 @@
   - Institution name
   - Location
   - Website
-  - # of GI Bill students
+  - Number of GI Bill students
   - Program (e.g. 4 year)
   - Type (e.g. Public)
   - Locale
