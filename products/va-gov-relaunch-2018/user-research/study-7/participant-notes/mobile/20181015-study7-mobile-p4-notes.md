@@ -22,7 +22,6 @@ Please take a moment to look at this new version of VA’s main website.
 - What are your impressions of this site?
   - It looks like a VA website.
   - *anything interesting to you?*
-    -
 - What do you think of the layout of this page?
   - *If they don’t mention it, ask about the Veteran images*
     - **On the health care page** They look like veterans to me.
@@ -60,7 +59,7 @@ Ask:
   - Scrolls through and reads. I'm already doing all of this. I use secure messenger also. Thats how I normally... thats how you have to get your prescriptions filled.  
 - Do you think this would be useful to you?
   - sure.
-- Did you notice the contact numbers [**MOBILE**: under the connect with us menu at the bottom of the page]? What do you think about this information?
+- Did you notice the contact numbers **MOBILE**: under the connect with us menu at the bottom of the page? What do you think about this information?
   - Id be looking for how and where to contact them. I didn't see that.
   - Wait having all of that would be beneficial to me but I didn't have any help, I had to find out all of that on my own. They had like VA representatives, DAV representatives, I went through all of them and...I never got anywhere with the VA rep. I was applying for disabilities being a Vietnam veteran. You couldn't get anywhere with the VA rep. The only thing the DAV is good for is transportation. The American Legion representative became more like a friend. He walked me through everything. It took time. It went from 10% which I did on my own and went from 35% to 50% to 75% to 100%. It took 30 years from the time that I applied the first time. You get paid from the VA from that time that you apply, but they only went back about 2 years.
   - Found under connect with me.
@@ -71,7 +70,7 @@ Ask:
 
 *Return user to one of the content pages or tool pages they visited in Task 2 or 3*
 
-- Please take a look at the navigation options on [DESKTOP: the left side of the screen] or [MOBILE: under the more in this section menu].   
+- Please take a look at the navigation options on DESKTOP: the left side of the screen or MOBILE: under the more in this section menu.   
 - What do you think about the options in this menu?
   - If I wasn't talking to you and I was trying to get in I would try it.
   - I've never done that before but I've refilled prescriptions online.
