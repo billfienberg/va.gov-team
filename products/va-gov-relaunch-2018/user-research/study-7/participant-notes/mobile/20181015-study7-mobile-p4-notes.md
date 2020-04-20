@@ -1,7 +1,7 @@
 # Preview.VA.gov - Mobile, 10-15-2018, P4
 
 
-**\**Sign informed consent****
+**Sign informed consent**
 
 ## Warm-up - 3 min
 
