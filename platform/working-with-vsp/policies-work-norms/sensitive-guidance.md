@@ -10,14 +10,11 @@ All content related to development on VA.gov belongs in the public [`va.gov-team
 
 ### PII
 
-Veteran PII should not be checked into GitHub. 
+Veteran PII should not be checked into GitHub.
 
 [OMB memorandum M-07-16](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2007/m07-16.pdf) includes extensive details about securing PII, including this brief definition:
 
-> The term "personally identifiable information" refers to information which can be used to distinguish or trace an
-individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined
-with other personal or identifying information which is linked or linkable to a specific individual, such as date and
-place of birth, mother’s maiden name, etc.
+> The term "personally identifiable information" refers to information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother’s maiden name, etc.
 
 ### Issues related to security issues in production
 
@@ -36,13 +33,13 @@ After finishing the postmortem, the postmortem SHOULD be copied to a public repo
 
 ### Vendor selection process
 
-*Gray area.* If the VA has been *asked* by a vendor to evaluate their software, issues and documentation related to that evaluation should likely remain private. However, if the VA has initiated their own evaluation of a given software, those results are less likely to be sensitive.
+_Gray area._ If the VA has been _asked_ by a vendor to evaluate their software, issues and documentation related to that evaluation should likely remain private. However, if the VA has initiated their own evaluation of a given software, those results are less likely to be sensitive.
 
 Confirm specific cases with DSVA.
 
 ### Documentation of VA systems and architecture
 
-*Gray area.* This depends heavily on the systems themselves. Try asking around in DSVA's `#sre` Slack channel.
+_Gray area._ This depends heavily on the systems themselves. Try asking around in DSVA's `#sre` Slack channel.
 
 Areas like the VA's network toplogy, especially regarding the TIC and surrounding systems, are likely to be considered sensitive by VA's networking and security teams.
 
@@ -53,3 +50,4 @@ Personal contact information for individuals working on VA.gov should generally 
 ### Test user information + credentials for lower environments
 
 Credentials should remain private.
+

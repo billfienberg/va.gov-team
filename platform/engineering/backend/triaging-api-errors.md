@@ -3,33 +3,35 @@
 When triaging errors in vets-api there are several tools available. Sentry for error disovery/tracking, AWS CloudWatch logs for an event stream, and Prometheus for metrics.
 
 ## Sentry
-Sentry is our primary source for API errors. There are Sentry 'projects' for each of our environments. 
-`platform-api-development`, `platform-api-staging`, and `platform-api-production`. Selecting a project 
-brings up a list of 'Unresolved Issues' sorted by 'Last Seen' date. Other sorting options are: 
-'Priority', 'First Seen', and 'Frequency'. Priority being one of the most useful as it's a time decay 
-algorithm that uses the total frequency to show both consistenly noisy and new issues. 
 
-Once you've found a Sentry issue you're interested in you can click it to view the details. The [official 
-Sentry docs](https://docs.sentry.io/) cover issue details but there are areas of interest in how we use each section:
-  - *Tags*: The auto-generated Rails tags, in concert with our custom tags, provide extra issue details. 
-`controller_name` and `transaction` let you know the source of an issue. `sign_in_method` marks 
-if the user signed in via  id.me, DSlogon, or MHV. The `team` tag marks an issue as belonging to an app team.
-  - *Message*: This section maps to the original exception's message. An identical message will appear 
-in the AWS CloudWatch logs in the `message` field.
+Sentry is our primary source for API errors. There are Sentry 'projects' for each of our environments. `platform-api-development`, `platform-api-staging`, and `platform-api-production`. Selecting a project brings up a list of 'Unresolved Issues' sorted by 'Last Seen' date. Other sorting options are: 'Priority', 'First Seen', and 'Frequency'. Priority being one of the most useful as it's a time decay algorithm that uses the total frequency to show both consistenly noisy and new issues.
 
-![Sentry Issue 01](images/triaging_errors_sentry_issue_01.png)
+Once you've found a Sentry issue you're interested in you can click it to view the details. The [official Sentry docs](https://docs.sentry.io/) cover issue details but there are areas of interest in how we use each section:
 
-  - *User*: Provides the `authn_context` (authentication context), the user's LOA level, and their uuid.
-  - *Additional Data*: Unless filtered the request `body` and extra `errors` details are here. `request_uuid` 
+* _Tags_: The auto-generated Rails tags, in concert with our custom tags, provide extra issue details. 
+
+  `controller_name` and `transaction` let you know the source of an issue. `sign_in_method` marks 
+
+  if the user signed in via  id.me, DSlogon, or MHV. The `team` tag marks an issue as belonging to an app team.
+
+* _Message_: This section maps to the original exception's message. An identical message will appear 
+
+  in the AWS CloudWatch logs in the `message` field.
+
+![Sentry Issue 01](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/backend/images/triaging_errors_sentry_issue_01.png)
+
+* _User_: Provides the `authn_context` \(authentication context\), the user's LOA level, and their uuid.
+* _Additional Data_: Unless filtered the request `body` and extra `errors` details are here. `request_uuid` 
+
   is a valuable field for correlation with AWS CloudWatch logs.
-  
-![Sentry Issue 02](images/triaging_errors_sentry_issue_02.png)
-  
-## AWS CloudWatch logs
-To save on database resources Sentry uses sampling. This means that all unique error events will be recorded 
-in Sentry but it will skip some error events. AWS logs capture every instance of an error.
 
-```json
+![Sentry Issue 02](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/backend/images/triaging_errors_sentry_issue_02.png)
+
+## AWS CloudWatch logs
+
+To save on database resources Sentry uses sampling. This means that all unique error events will be recorded in Sentry but it will skip some error events. AWS logs capture every instance of an error.
+
+```javascript
 {
   "host": "ip-xxx-xx-xx-xx",
   "application": "vets-api-server",
@@ -63,46 +65,44 @@ in Sentry but it will skip some error events. AWS logs capture every instance of
 }
 ```
 
-| field                      | detail                                                                                 |
-|----------------------------|----------------------------------------------------------------------------------------|
-| host                       | ip address of the host instance                                                        |
-| application                | app name e.g. `vets-api-server` or `vets-api-worker`                                   |
-| timestamp                  | timestamp in UTC                                                                       |
-| level                      | error level e.g. `debug`, `info`, `warn`, `error`                                      |
-| level_index                | error level index                                                                      |
-| pid                        | linux process identification number                                                    |
-| thread                     | puma server thread                                                                     |
-| file                       | where the log took place, many will be in sentry_logging.rb as sentry call route there |
-| line                       | line number where the log took place                                                   |
-| named_tags.request_id      | the rack request id, called 'request_uuid' in sentry                                   |
-| named_tags.ref             | the git SHA-1 hash                                                                     |
-| name                       | framework name e.g. Rails or in the case of workers Sidekiq                            |
-| message                    | the original exeception message                                                        |
-| payload.title              | json:api spec title; a short, human-readable summary of the problem that SHOULD NOT change from occurrence to occurrence of the problem                                                                               |
-| payload.detail             | json:api spec detail; a human-readable explanation specific to this occurrence of the problem                                                                                                                         |
-| payload.code               | json:api spec code; an application-specific error code, expressed as a string value    |
-| payload.session            | the user session, can be used to trace a user's flow through the app                   |
-| payload.source             | json:api spec source; an object containing references to the source of the error       |
-| payload.status             | json:api spec status; an object containing references to the source of the error       |
-| payload.backtrace          | ruby backtrace of the error                                                            |
+| field | detail |
+| :--- | :--- |
+| host | ip address of the host instance |
+| application | app name e.g. `vets-api-server` or `vets-api-worker` |
+| timestamp | timestamp in UTC |
+| level | error level e.g. `debug`, `info`, `warn`, `error` |
+| level\_index | error level index |
+| pid | linux process identification number |
+| thread | puma server thread |
+| file | where the log took place, many will be in sentry\_logging.rb as sentry call route there |
+| line | line number where the log took place |
+| named\_tags.request\_id | the rack request id, called 'request\_uuid' in sentry |
+| named\_tags.ref | the git SHA-1 hash |
+| name | framework name e.g. Rails or in the case of workers Sidekiq |
+| message | the original exeception message |
+| payload.title | json:api spec title; a short, human-readable summary of the problem that SHOULD NOT change from occurrence to occurrence of the problem |
+| payload.detail | json:api spec detail; a human-readable explanation specific to this occurrence of the problem |
+| payload.code | json:api spec code; an application-specific error code, expressed as a string value |
+| payload.session | the user session, can be used to trace a user's flow through the app |
+| payload.source | json:api spec source; an object containing references to the source of the error |
+| payload.status | json:api spec status; an object containing references to the source of the error |
+| payload.backtrace | ruby backtrace of the error |
 
-You can access AWS logs via the [AWS web console](https://aws.amazon.com/console/). But it's often more efficient to query logs via the command line. 
-The AWS CLI is one option, a higher level CLI is awslogs.
+You can access AWS logs via the [AWS web console](https://aws.amazon.com/console/). But it's often more efficient to query logs via the command line. The AWS CLI is one option, a higher level CLI is awslogs.
 
 ### awslogs
-All CLI interactions with AWS, including awslogs, needs an active MFA session. Instructions for which are in the 
-[devops credentials docs](https://github.com/department-of-veterans-affairs/devops#credentials). Once you're setup you can create a new MFA session by entering the following in a new terminal:
+
+All CLI interactions with AWS, including awslogs, needs an active MFA session. Instructions for which are in the [devops credentials docs](https://github.com/department-of-veterans-affairs/devops#credentials). Once you're setup you can create a new MFA session by entering the following in a new terminal:
 
 ```bash
 $ mfa 060350
 AWS Session credentials saved. Will expire in 12 hours
 ```
 
-You can now run awslogs commands, there are two log groups we're interested in; 'server' and 'worker' which are `dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-server.log` and `dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-worker.log` respectively.
-e.g. to get all server errors in production over the last minute (`-s 1m`) run:
+You can now run awslogs commands, there are two log groups we're interested in; 'server' and 'worker' which are `dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-server.log` and `dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-worker.log` respectively. e.g. to get all server errors in production over the last minute \(`-s 1m`\) run:
 
 ```bash
-awslogs get dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-server.log ALL -s 1m -S -G 
+awslogs get dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-server.log ALL -s 1m -S -G
 ```
 
 and to get all worker logs over the same period:
@@ -114,6 +114,7 @@ awslogs get dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-server.log ALL -s 1m
 In the examples aboce the `-G` and `-S` options remove the group and stream names.
 
 ### Filter and Pattern Syntax
+
 We're usually looking for a specific error or a pattern of errors. AWS CloudWatch provides a [filter and pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html) which works with the structured JSON log format we use. The `$` references the root JSON object after which you can lookup field values via dot notation. Below we filter all production server logs over the last minute for errors:
 
 ```bash
@@ -158,6 +159,7 @@ awslogs get dsva-vetsgov-prod/srv/vets-api/src/log/vets-api-server.log ALL --fil
 ```
 
 ## Prometheus
+
 [Prometheus](http://prometheus-prod.vetsgov-internal:9090/prometheus/graph) captures a wide array of metrics. api.va.gov automatically captures metrics around latency, requests per minute, and error rates. To view the impact of a specific error you need to have in place StatsD metrics that track total calls and failures. Tracking totals from the api:
 
 ```ruby
@@ -191,16 +193,19 @@ end
 
 With those calls in place we can query for the sum across deployed server instances in Prometheus:
 
-```
+```text
 sum(api_appeals_get_appeals_total)
 ```
-![Sentry Issue 01](images/triaging_errors_prometheus_01.png)
+
+![Sentry Issue 01](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/backend/images/triaging_errors_prometheus_01.png)
 
 The error query can filter by error tag:
 
-```
+```text
 sum(api_appeals_get_appeals_fail) by (error)
 ```
-![Sentry Issue 01](images/triaging_errors_prometheus_02.png)
+
+![Sentry Issue 01](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/backend/images/triaging_errors_prometheus_02.png)
 
 Ongoing issues can have their related Prometheus queries saved as [Grafana](http://grafana.vetsgov-internal) dashboards. An example of this is the [EVSS dashboard](http://grafana.vetsgov-internal/dashboard/db/evss?orgId=1). As prometheus [queries can be complex](https://prometheus.io/docs/prometheus/latest/querying/basics/), inspecting or [editing](https://grafana.com/docs/guides/getting_started/#adding-editing-graphs-and-panels) an existing Grafana dashboard is a good way to learn how to write them.
+

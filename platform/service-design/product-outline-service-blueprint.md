@@ -1,13 +1,11 @@
-# Service Blueprint Product Outline 
+# Service Blueprint Product Outline
 
 #### Communications
 
-- Team Name: VSP Service Design
-- GitHub Label:
-- Slack channel: #vsp-service-design
-- Product POCs:  James Chasia, Naomi Marcussen
-
-------
+* Team Name: VSP Service Design
+* GitHub Label:
+* Slack channel: \#vsp-service-design
+* Product POCs:  James Chasia, Naomi Marcussen
 
 ## Overview
 
@@ -21,7 +19,7 @@ VSP do not have a single place tto go to see high-level view of pain points acro
 
 Leads to disjointed overall customer experience and leaves certain fustrating pain points unresolved.
 
-*How might we enable VSP teams to see pain points and successes across the end-to-end experience of VFS teams on the platform.*
+_How might we enable VSP teams to see pain points and successes across the end-to-end experience of VFS teams on the platform._
 
 ## Desired User Outcomes
 
@@ -37,27 +35,25 @@ The service blueprint is not representative of the VFS teams’ experiences work
 
 ## Assumptions
 
-The service blueprint will enable VSP teams to identify pain points they see as important to investigate in order to improve the platform customer experience. 
+The service blueprint will enable VSP teams to identify pain points they see as important to investigate in order to improve the platform customer experience.
 
 ## Solution Approach
 
 The service blueprint connects VFS-VSP touchpoints to the platform processes that are required to deliver them. It will consist of:
 
-- The customer journey map phase by phase
-- The touchpoints for each VFS team member role
-- The services provided by each VSP team
-- The results from insights research across the platform.
+* The customer journey map phase by phase
+* The touchpoints for each VFS team member role
+* The services provided by each VSP team
+* The results from insights research across the platform.
 
-The service blueprint is intended to *show us what to look at* - where in the customer journey the experience breaks down or opportunities exist. It will *not tell us what to do* - it is an investigative tool not a solutioning one. 
+The service blueprint is intended to _show us what to look at_ - where in the customer journey the experience breaks down or opportunities exist. It will _not tell us what to do_ - it is an investigative tool not a solutioning one.
 
 To validate our assumption, we will hold service blueprint workshops with each VSP team to understand each team’s interactions with VFS teams and identify pain points that should be prioritized for investigation.
 
 ## KPIs
 
-- Customer NPS
-- Resolution of pain points prioritized in service blueprint workshops.
-
-------
+* Customer NPS
+* Resolution of pain points prioritized in service blueprint workshops.
 
 ## Solution Narrative
 
@@ -65,10 +61,10 @@ To validate our assumption, we will hold service blueprint workshops with each V
 
 First, we built a high-level view showing the intersection of pain points and platform processes based on existing research insights. We created a [consolidated list](https://docs.google.com/spreadsheets/d/1ufL_Ep6HE4nUm6E9zB8A0UMSc10gu91CsIJh56oi9h8/edit?usp=sharing) of pain points from:
 
-- ROE documentation user research
-- Testing discovery
-- Post-onboarding surveys
-- Questions on Slack channels 
+* ROE documentation user research
+* Testing discovery
+* Post-onboarding surveys
+* Questions on Slack channels 
 
 We then individually rated each pain point as a:
 
@@ -80,17 +76,15 @@ We then individually rated each pain point as a:
 
 Then took the average score to show the acuteness of each pain point in the service blueprint.
 
-Now, we are defining a global research plan to fill in gaps with robust data and establishing a process for updating and maintaining research findings for the map.  As well as planning the service blueprint workshops.
+Now, we are defining a global research plan to fill in gaps with robust data and establishing a process for updating and maintaining research findings for the map. As well as planning the service blueprint workshops.
 
 ### Key Decisions
 
-Type of tools to use - miro vs. mural, optimal workshop vs.  google sheet
+Type of tools to use - miro vs. mural, optimal workshop vs. google sheet
 
 Categorization of pain points
 
 Workshop structure
-
-------
 
 ## Screenshots
 

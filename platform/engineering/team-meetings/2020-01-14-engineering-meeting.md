@@ -1,22 +1,24 @@
+# 2020-01-14-engineering-meeting
+
 2:30-3:30PMET
 
-# Access
+## Access
 
-* https://zoom.us/j/722853312
-* +16465588656,,722853312# US (New York)
-* +17207072699,,722853312# US (Denver)
+* [https://zoom.us/j/722853312](https://zoom.us/j/722853312)
+* +16465588656,,722853312\# US \(New York\)
+* +17207072699,,722853312\# US \(Denver\)
 
-# Agenda
+## Agenda
 
 * Quick housekeeping with JP: request for sharing and talks
 * Platform announcements:
-- Docker containers rolled out (Wyatt/Nathan)
-- Upcoming Ruby upgrades (2.5, 2.6)
-* Plain language linting (Keifer)
+* Docker containers rolled out \(Wyatt/Nathan\)
+* Upcoming Ruby upgrades \(2.5, 2.6\)
+* Plain language linting \(Keifer\)
 
-# Notes
+## Notes
 
-
-# Next meeting
+## Next meeting
 
 Tuesday 1/28/2020 @ 2:30 Eastern.
+

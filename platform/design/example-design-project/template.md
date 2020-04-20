@@ -1,11 +1,16 @@
-# Example Template
+# template
+
+## Example Template
+
 This template includes the following content types:
-- Header
-- Call-to-Action
-- List of Documents needed
+
+* Header
+* Call-to-Action
+* List of Documents needed
 
 Below is a full example of the Example Template:
-```
+
+```text
 ---
 title: Example Project
 concurrence: complete
@@ -46,15 +51,16 @@ template: 4-action-page-pending
 </div>
 ```
 
-# Special Code Notes:
+## Special Code Notes:
 
 If you need to add a special class to the documents list, make sure it is done in the following way:
-```
+
+```text
 - List item 1
 - List item 2
 - List item 3
 {:.special-class-for-list}
 ```
 
-Do you have a question about other classes or ids?
-Please refer to the [Markdown Style Guide](www.vets.gov)
+Do you have a question about other classes or ids? Please refer to the [Markdown Style Guide](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/design/example-design-project/www.vets.gov)
+

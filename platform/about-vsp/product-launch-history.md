@@ -1,35 +1,36 @@
-
-# Digital Service Product Launch History (vets/VA.gov)
+# Digital Service Product Launch History \(vets/VA.gov\)
 
 ## 2019
-### VA.gov Planned (through May)  
-Health Care Application – duplicate submission reduction   
+
+### VA.gov Planned \(through May\)
+
+Health Care Application – duplicate submission reduction  
 Patient Experience – Cerner integration  
 MHV SSO  
 Session Expiration  
-Direct Deposit Updates (Personalization)  
+Direct Deposit Updates \(Personalization\)  
 526 Servicemember error messaging  
 GI Bill Troubleshooting Wizard  
-Combined Disability Rating Calculator  
+Combined Disability Rating Calculator
 
+### VA.gov \(complete/in progress\)
 
-### VA.gov (complete/in progress)  
 GI Bill Feedback Tool  
 Login flow V2  
 vets-api error handling V2  
-Benefits recommendations   
-Launched 526 EZ (Self-service claims)  
-Servicemember content hub (March)  
-Caregiver and Family member content hub (March)  
-Design.va.gov
-VetTec Colmery form
+Benefits recommendations  
+Launched 526 EZ \(Self-service claims\)  
+Servicemember content hub \(March\)  
+Caregiver and Family member content hub \(March\)  
+Design.va.gov VetTec Colmery form
 
-Caseflow
-Launched functionality in support of Appeals Modernization Act  
-Updated Appeals status tool  
+Caseflow Launched functionality in support of Appeals Modernization Act  
+Updated Appeals status tool
 
-##  2018
-### Vets.gov  
+## 2018
+
+### Vets.gov
+
 VA Letters and Documents  
 Welcome Kit  
 Comp & Pension Exam Content  
@@ -38,25 +39,26 @@ Downtime Notifications
 Error Standardization Guide  
 MHV Logon on Vets.gov  
 Login FAQ content  
-Pension Benefits Application (21P-527EZ)  
-Burial Benefits Application (21P-530)  
+Pension Benefits Application \(21P-527EZ\)  
+Burial Benefits Application \(21P-530\)  
 Launched new appeals status tool  
 Launched Profile and Dashboard on Vets.gov  
 Launched Account V2  
-MVP User Notification   
+MVP User Notification  
 Launched Benefits Intake API  
 MVP Formation Design System  
 Education data sharing opt-out tool  
 Vets.gov integration with Vet360  
 “View medical images” on MyHealtheVet  
-MVP Claim for Increase (526)  
+MVP Claim for Increase \(526\)  
 MHV Premium Account upgrade feature on Vets.gov  
-Pre-need Burial Benefits Application (40-10007)  
+Pre-need Burial Benefits Application \(40-10007\)  
 Created a design system codebase  
 Launched “preview.va.gov”  
-Launched VA.gov   
+Launched VA.gov
 
-### VA.gov   
+### VA.gov
+
 Content Strategy  
 9 new content hubs  
 18 new content spokes  
@@ -64,7 +66,7 @@ Content Strategy
 10 new drop down Mega–menus  
 New Global Header with login  
 New Global Footer  
-New Veteran Crisis Line utility    
+New Veteran Crisis Line utility  
 MyVA 311 Call Center IVR  
 SEO and Search improvements  
 Consolidated all Privacy and T&C’s  
@@ -74,15 +76,16 @@ Create, edit and deploy global alerts
 Updating the header and global navigation across some existing VA.gov sites  
 Single Sign On with MHV users  
 Complete Search.gov integration into VA.gov  
-Technical Integration (DNS, Firewalls, SSL certs)  
+Technical Integration \(DNS, Firewalls, SSL certs\)
 
-### Caseflow  
+### Caseflow
+
 Intake  
-Queue  
-
+Queue
 
 ## 2017
-### Vets.gov  
+
+### Vets.gov
 
 Education benefits application 22-1990  
 Education benefits application 22-1995  
@@ -101,7 +104,7 @@ Population Specific Content
 Spouse & Dependents Content  
 Survivor Assistance Content  
 Memorial & Burials Content  
-Careers & Employment Content (including VEC)  
+Careers & Employment Content \(including VEC\)  
 Voc Rehab & Employment Content  
 Veteran Owned Business Content  
 Disability Benefits Content  
@@ -112,10 +115,12 @@ Substance Abuse Treatment Content
 Wellness / Preventative Care / Quality Care Content  
 Housing Content  
 Life Insurance Content  
-Pension Content  
+Pension Content
 
 ## 2016
-### Vets.gov  
+
+### Vets.gov
+
 Secure Messaging  
 Claims and Appeals Status V1  
 Access Health Records  
@@ -129,4 +134,5 @@ GI Bill Comparison Tool
 GI Bill Comparison Tool Data Service  
 Playbook  
 Crisis Line modal  
-Search  
+Search
+

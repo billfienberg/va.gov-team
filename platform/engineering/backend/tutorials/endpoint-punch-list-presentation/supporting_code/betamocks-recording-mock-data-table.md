@@ -1,5 +1,8 @@
+# betamocks-recording-mock-data-table
+
 ## vets-api-mockdata/evss/pciu/email/796376250.yml
-````yml
+
+```text
 ---
 :method: :get
 :body:
@@ -26,12 +29,13 @@
   connection: close
   transfer-encoding: chunked
 :status: 200
-````
+```
 
-## vets-api-mockdata/make_table.rb
-````ruby
+## vets-api-mockdata/make\_table.rb
+
+```ruby
 ...
-  
+
 SERVICES = [
   ...
   Service.new('pciu profile',
@@ -43,13 +47,15 @@ SERVICES = [
 ].freeze
 
 ...
-````
+```
 
 ## vets-api-mockdata/users.csv
-````csv
+
+```text
 ...
 
 MARION H FOSTER,796376250,vets.gov.user+37@gmail.com,
 
 ...
-````
+```
+

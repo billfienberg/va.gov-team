@@ -1,10 +1,12 @@
-# Video Demonstrations of Vets.gov Products  
-##### List of publically available resources
+# Video Demonstrations of Vets.gov Products
 
-Service and Facilities Locator Demo (April 2016) - https://www.youtube.com/watch?v=HSdJaxCIb34  
+## List of publically available resources
 
-GI Bill Comparison Tool Webinar (March 2016) - https://www.youtube.com/watch?v=MzaOQ9mXkJU  
+Service and Facilities Locator Demo \(April 2016\) - [https://www.youtube.com/watch?v=HSdJaxCIb34](https://www.youtube.com/watch?v=HSdJaxCIb34)
 
-Post 9/11 GI Bill Statement of Benefits (July 2017) - https://youtu.be/Uv7zPIuu03M
+GI Bill Comparison Tool Webinar \(March 2016\) - [https://www.youtube.com/watch?v=MzaOQ9mXkJU](https://www.youtube.com/watch?v=MzaOQ9mXkJU)
 
-Download VA Letters and Documents (October 2017) - https://youtu.be/AZyswX6gCw8
+Post 9/11 GI Bill Statement of Benefits \(July 2017\) - [https://youtu.be/Uv7zPIuu03M](https://youtu.be/Uv7zPIuu03M)
+
+Download VA Letters and Documents \(October 2017\) - [https://youtu.be/AZyswX6gCw8](https://youtu.be/AZyswX6gCw8)
+

@@ -8,54 +8,50 @@ This document covers rules for engaging the VSP team in [pull request reviews](h
 
 We expect developers to be familiar with GitHub and the pull request review process, but want to be clear about our norms to reduce confusion and help code flow through the process as quickly and reliably as possible.
 
-## Code owners 
+## Code owners
 
-Information on how VSP uses code owners can be found [here](code-owners.md).
+Information on how VSP uses code owners can be found [here](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/code-owners.md).
 
 ## The pull request review lifecycle in brief
 
 1. For initial review by your project team, create a [Draft Pull Request](https://github.blog/2019-02-14-introducing-draft-pull-requests/)
-2. Once your team has given it an approving peer review, use the GitHub *Ready for review* button in the merge section of your pull request. An engineer should review the code within one business day. 
+2. Once your team has given it an approving peer review, use the GitHub _Ready for review_ button in the merge section of your pull request. An engineer should review the code within one business day. 
 3. Each additional round of changes will be reviewed within one business day.
 4. When all review comments have been resolved, the PR can be merged into the master branch for deployment.
 
-*Hint*: Smaller, focused pull requests will make this easier for everyone!
+_Hint_: Smaller, focused pull requests will make this easier for everyone!
 
 ## Code Review Guidelines
 
-Your code will be automatically reviewed by automated systems for format, common errors, typical
-language idioms, and code preferences using language-standard tools. 
+Your code will be automatically reviewed by automated systems for format, common errors, typical language idioms, and code preferences using language-standard tools.
 
 When your code is reviewed, here are some of the things we're looking for:
 
-* *Correctness*. Does the code correctly implement the described feature?
-* *Code quality*. Is the code readable? Is the code language-idiomatic?
-* For front end changes, are screenshots of the change(s) included?
-
+* _Correctness_. Does the code correctly implement the described feature?
+* _Code quality_. Is the code readable? Is the code language-idiomatic?
+* For front end changes, are screenshots of the change\(s\) included?
 
 ## Basic expectations for pull requests
 
 * **PR title** should be a concise summary of the change.
-
 * **PR Description**: make it clear what the change is describing.
-    * explain how code changes are related to the pull request objectives.
-    * reference the **GitHub issues** your PR relates to, in order to provide reviewers more context.
-
+  * explain how code changes are related to the pull request objectives.
+  * reference the **GitHub issues** your PR relates to, in order to provide reviewers more context.
 * Keep your changes scoped to one feature at a time.
-    * **Size**: changes should be smaller than a few hundred changed lines and a couple dozen files. *If your change can't be smaller than this, talk to the team in #vfs-platform-support before asking for a review.*
-    * **One thing at a time**: feature code, cleanup/refactoring changes, dependency/package upgrades, and database migrations should all be in **separate PRs**. As much as possible, each PR should address a single feature or bug at a time.
-
+  * **Size**: changes should be smaller than a few hundred changed lines and a couple dozen files. _If your change can't be smaller than this, talk to the team in \#vfs-platform-support before asking for a review._
+  * **One thing at a time**: feature code, cleanup/refactoring changes, dependency/package upgrades, and database migrations should all be in **separate PRs**. As much as possible, each PR should address a single feature or bug at a time.
 * **Linting**: format your code in accordance with style guidelines.
-    * Run your linter and address any linting related issues before opening your PR.
-    * If you programmatically ignore a linting recommendation (e.g. via `rubocop:disable`), please comment in the PR explaining why.
-    * If your linter does raise any issues unrelated to the PR's subject matter, please fix these in a separate PR.
+  * Run your linter and address any linting related issues before opening your PR.
+  * If you programmatically ignore a linting recommendation \(e.g. via `rubocop:disable`\), please comment in the PR explaining why.
+  * If your linter does raise any issues unrelated to the PR's subject matter, please fix these in a separate PR.
 
 ## FAQ
 
 Q. I created a pull request and I meant to create a draft pull request instead. How do I change it to a draft pull request in GitHub?
 
-A.  Unfortunately, you can't change it. But as an alternative, please add "WIP" to the beginning of the title of your PR and we'll know what it means.
+A. Unfortunately, you can't change it. But as an alternative, please add "WIP" to the beginning of the title of your PR and we'll know what it means.
 
-Q. I need a review *right now*! How do I get one?
+Q. I need a review _right now_! How do I get one?
 
 A. We try to do pull request reviews quickly, but if you need a review faster, escalate via your DSVA product owner. Please don't post in Slack asking for a review unless it has been more than a full business day.
+

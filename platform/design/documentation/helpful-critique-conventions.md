@@ -1,6 +1,8 @@
+# helpful-critique-conventions
+
 Note: this is somewhat duplicative of [an exisiting design review doc](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/documentation/design-review-process.md) but I don't have time to merge the two at the moment
 
-# Critique conventions
+## Critique conventions
 
 Some helpful ground rules for effective critique sessions
 
@@ -19,3 +21,4 @@ Some helpful ground rules for effective critique sessions
 3. Tips:
    1. Keep feedback constructive and focused on the desired scope
    2. +1 is better than reiterating
+

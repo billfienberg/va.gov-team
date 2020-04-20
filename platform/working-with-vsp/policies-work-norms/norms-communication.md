@@ -2,7 +2,7 @@
 
 ## Communicating "breaking changes"
 
-Breaking changes are changes to design, content, or code that have the potential to affect (break) the work of other teams currently working on the Veteran-facing Services Platform (VSP).
+Breaking changes are changes to design, content, or code that have the potential to affect \(break\) the work of other teams currently working on the Veteran-facing Services Platform \(VSP\).
 
 For example:
 
@@ -12,23 +12,24 @@ For example:
 * A change to how the website build process works
 * A significant change to the content style guide
 
-**All instances of breaking changes should be posted to *#vfs-all-teams*.**
+**All instances of breaking changes should be posted to** _**\#vfs-all-teams**_**.**
 
 The post needs to provide enough information that a designer, developer, or content person can know what they need to do in order to accommodate the change in their work. Some examples:
 
-> Sketch file has been updated to include new treatment for X. Find the Sketch file here [link].
-
-> We changed how the feature toggle works. Instead of doing [describe the old way], you need to do X [describe the new way].
+> Sketch file has been updated to include new treatment for X. Find the Sketch file here \[link\].
+>
+> We changed how the feature toggle works. Instead of doing \[describe the old way\], you need to do X \[describe the new way\].
 
 ## DSVA and platform responsibilities
 
 ### DSVA authorizes access for VFS teams
 
 * To ensure we limit VA access to the right people, a DSVA person will add VFS team members.
-  * If a new need arises (e.g., access to a new Github repo is needed), direct the request to the DSVA contact, who will determine access and permissions.
+  * If a new need arises \(e.g., access to a new Github repo is needed\), direct the request to the DSVA contact, who will determine access and permissions.
 
 ### DSVA and the platform team provide support
-* DSVA and the platform team will monitor the #vfs-platform-support Slack channel for product-focused questions/inquiries from VFS teams.
+
+* DSVA and the platform team will monitor the \#vfs-platform-support Slack channel for product-focused questions/inquiries from VFS teams.
 
 ### The platform team cannot direct VFS teams
 
@@ -47,29 +48,34 @@ Questions are bound to come up that fall somewhere between "How do I?" and "What
 
 ## VFS team responsibilities
 
-### Look for documentation before posting a question in Slack (or contacting DSVA).
+### Look for documentation before posting a question in Slack \(or contacting DSVA\).
+
 * See your team's Github "Product" folder or orientation guides.
-* If you don't find an answer, post in #vfs-platform-support.
+* If you don't find an answer, post in \#vfs-platform-support.
 
 ### Use Slack channels for different purposes.
 
 * **For product questions** use your team's "product" Slack channel.
   * Example question: "Where can I find previous research?"
-* **For process questions**, use the *#vfs-platform-support* Slack channel.
+* **For process questions**, use the _\#vfs-platform-support_ Slack channel.
   * Example questions: "I can't get the proxy to work" or "How do I integrate this into that?" or "How do I use Zenhub to do X?"
-* **For practice area questions** use your practice area Slack channel (e.g., *#design*)
+* **For practice area questions** use your practice area Slack channel \(e.g., _\#design_\)
 
 ### Use best communication method.
 
 #### Slack - best communication method
+
 * Slack channels allow us to do our work in the open so that others can learn from the questions asked and the answers provided. Please do the same.
-* We discourage private Slack conversations (DMs) for the same reason.
+* We discourage private Slack conversations \(DMs\) for the same reason.
 * **VFS teams should use public Slack channels as their first method of communication.**
 
 #### Meetings - slowest communication method
+
 * If your team has a question about something, ask it in a Slack channel.
 * Don't wait to organize a meeting to ask a question; this will slow your team down.
 
 #### Email - least effective communication method
+
 * Email communications are not easily searchable or archivable.
 * Use this as a last resort for communication.
+

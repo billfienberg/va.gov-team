@@ -2,17 +2,20 @@
 
 ## General sitewide guidelines
 
-[Messaging dictionary](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Dictionary.md)<br>Documents scenarios requiring feedback to the user and how to handle them
+[Messaging dictionary](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Dictionary.md)  
+Documents scenarios requiring feedback to the user and how to handle them
 
-[Content style guide](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Content%20Style%20Guide.md)<br>Content guidelines for drafting new messaging
+[Content style guide](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Content%20Style%20Guide.md)  
+Content guidelines for drafting new messaging
 
-[Design style guide](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Design%20Style%20Guide.md)<br>Display guidelines for implementing new messaging
+[Design style guide](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Design%20Style%20Guide.md)  
+Display guidelines for implementing new messaging
 
 [Technical considerations](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Technical%20considerations.md)
 
 ## Product-specific documentation
 
-*Keep this list updated as new products launch!*
+_Keep this list updated as new products launch!_
 
 [Appeal status](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/products/claim-appeal-status/appeals-status/error-messages.md)
 
@@ -30,7 +33,6 @@ Letters
 
 [Prescription refills](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/products/health-care/prescription-refills/product/2016/feedback-messaging.md)
 
-
 ## Resources
 
 [Product messaging documentation template](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/Feedback%20messaging%20template.md)
@@ -39,7 +41,7 @@ Letters
 
 [User experience goals](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/design/design-system/guidelines/error-handling/User%20Experience%20Goals.md)
 
-Slack channel: #error-standardization
+Slack channel: \#error-standardization
 
 ## Background
 
@@ -47,7 +49,8 @@ December 2017 sitewide audit and development of guidelines for messaging content
 
 Team members:
 
-- Danielle Thierry (content)
-- Mel Woodard (design)
-- Ben Shyong (front-end)
-- Ben Barone (product)
+* Danielle Thierry \(content\)
+* Mel Woodard \(design\)
+* Ben Shyong \(front-end\)
+* Ben Barone \(product\)
+

@@ -1,4 +1,6 @@
-### Request Spec
+# match\_response\_schema-implementation
+
+## Request Spec
 
 ```ruby
 # vets-api/spec/request/email_request_spec.rb
@@ -14,10 +16,9 @@ describe 'GET /v0/profile/email' do
 end
 ```
 
+## Associated Support Response Schema
 
-### Associated Support Response Schema
-
-```js
+```javascript
 // vets-api/spec/support/schemas/email_address_response.json
 
 {
@@ -51,9 +52,9 @@ end
 }
 ```
 
-### Derived from Endpoint Response
+## Derived from Endpoint Response
 
-```js
+```javascript
 {
   "data": {
     "id": "",
@@ -65,3 +66,4 @@ end
   }
 }
 ```
+

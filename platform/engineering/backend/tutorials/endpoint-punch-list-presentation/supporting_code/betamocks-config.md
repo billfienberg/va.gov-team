@@ -1,5 +1,8 @@
-## vets-api/config/betamocks/services_config.yml
-````yml
+# betamocks-config
+
+## vets-api/config/betamocks/services\_config.yml
+
+```text
 # EVSS
 - :name: 'EVSS'
   :base_uri: <%= "#{URI(Settings.evss.url).host}:#{URI(Settings.evss.url).port}" %>
@@ -11,13 +14,16 @@
     :cache_multiple_responses:
       :uid_location: header
       :uid_locator: 'va_eauth_pnid'
-````
+```
+
 ## vets-api/config/settings.yml
-````yml
+
+```text
 ...
 
 evss:
   mock_pciu: true
 
 ...
-````
+```
+

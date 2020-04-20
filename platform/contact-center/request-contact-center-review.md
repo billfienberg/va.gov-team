@@ -4,33 +4,29 @@
 
 All applications on the Veteran-facing Services Platform include a phone number Veterans can call to ask questions about the application's functionality.
 
-**Before applications (or new features) launch on the Veteran-facing Services Platform, all teams must file a Contact Center Review issue that includes a Product Guide and Product Video.** The VSP Contact Center team will review these materials and share with the relevant contact centers to ensure that Contact Center Representatives are prepared to answer questions about the new functionality.
+**Before applications \(or new features\) launch on the Veteran-facing Services Platform, all teams must file a Contact Center Review issue that includes a Product Guide and Product Video.** The VSP Contact Center team will review these materials and share with the relevant contact centers to ensure that Contact Center Representatives are prepared to answer questions about the new functionality.
 
-**VFS teams should file a Contact Center Review issue...**
-  1. When the complete and final build is on staging and they are confident it's ready to launch,
-  1. After they've completed the [Prepare for Contact Center Review](#prepare-for-contact-center-review) steps and,
-  1. At least *4 weeks* prior to the launch date for a brand new service **OR**,
-  1. At least *2 weeks* prior to the launch date for a new feature in an existing service.
+**VFS teams should file a Contact Center Review issue...** 1. When the complete and final build is on staging and they are confident it's ready to launch, 1. After they've completed the [Prepare for Contact Center Review](request-contact-center-review.md#prepare-for-contact-center-review) steps and, 1. At least _4 weeks_ prior to the launch date for a brand new service **OR**, 1. At least _2 weeks_ prior to the launch date for a new feature in an existing service.
 
-*If your team thinks it will have trouble meeting the outlined timeline, reach out to your Contact Center POC to determine how to move forward.*
+_If your team thinks it will have trouble meeting the outlined timeline, reach out to your Contact Center POC to determine how to move forward._
 
 ## Prepare for Contact Center Review
 
 ### Step 1: Create the Product Guide
 
-*If you're building a brand new service*:
+_If you're building a brand new service_:
 
-  1. Create a Product Guide that covers all the functionality, the main user flow(s), any error conditions, and how the user can resolve those errors.
-  1. The Product Guide must be a Word document or a PDF.
-  1. Create a new folder in your team's Product folder called ```Contact Center.``` Store the Product Guide there.
+1. Create a Product Guide that covers all the functionality, the main user flow\(s\), any error conditions, and how the user can resolve those errors.
+2. The Product Guide must be a Word document or a PDF.
+3. Create a new folder in your team's Product folder called `Contact Center.` Store the Product Guide there.
 
-*If you're building new features for an existing service*:
+_If you're building new features for an existing service_:
 
-  1. You'll need to update the existing Product Guide.
-      * If you can't find the existing Product Guide on Github, ask your Contact Center POC to find it for you.
-  1. Store the updated Product Guide in its original location.
+1. You'll need to update the existing Product Guide.
+   * If you can't find the existing Product Guide on Github, ask your Contact Center POC to find it for you.
+2. Store the updated Product Guide in its original location.
 
-*Examples*:
+_Examples_:
 
 [Example Product Guide 1](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/working-with-vsp/templates/sample-product-guide-1.pdf)
 
@@ -38,32 +34,32 @@ All applications on the Veteran-facing Services Platform include a phone number 
 
 ### Step 2: Create the Product Video
 
-*For new services and updates to existing services*:
+_For new services and updates to existing services_:
 
-  1. Create a Product Video (with audio) that steps through the primary user flows.
-  1. Create a transcript of the audio from the Product Video. The transcript must be a Word document or a PDF.
-  1. Remember your Product Video will be uploaded to the VA Youtube channel. It will be unlisted but visible to people with the URL.
+1. Create a Product Video \(with audio\) that steps through the primary user flows.
+2. Create a transcript of the audio from the Product Video. The transcript must be a Word document or a PDF.
+3. Remember your Product Video will be uploaded to the VA Youtube channel. It will be unlisted but visible to people with the URL.
 
 ## Request Contact Center Review
 
-1. File an issue in ```va.gov-team repo```.
-    * Title: ```Request Contact Center Review for [feature or service name]```
-    * Labels:
-      * ```contact center```
-      * ```external-request```
-      * ```[your team's Github label]```, e.g., "BAH-526"
-    * Assign the issue to: ```Chante Lantos-Swett```and ```Kimberley Daniels```
-    * Issue Details: Include the following information.
-      * **Context**: Provide a high-level description of the functionality for which you're requesting this review, for example:
-        * ```Functionality adds a new dataset to the Facility Locator so users can search for and view non-VA health providers on the map, as well as in list and detail views.```
-      * **Launch Date and Details**: ```summary or link to launch plans, including any communication happening prior to launch``` 
-      * **URL**: ```link to your project on staging```
-      * **Product Guide**: ```link to the Product Guide on Github```
-      * **Product Video**: ```link to the demo video on Github``` *(If this file is too large to upload on github, the file can be emailed to the contact center POCs)*
-      * **Product Video Transcript**: ```link to the Product Video Transcript on Github```      
+1. File an issue in `va.gov-team repo`.
+   * Title: `Request Contact Center Review for [feature or service name]`
+   * Labels:
+     * `contact center`
+     * `external-request`
+     * `[your team's Github label]`, e.g., "BAH-526"
+   * Assign the issue to: `Chante Lantos-Swett`and `Kimberley Daniels`
+   * Issue Details: Include the following information.
+     * **Context**: Provide a high-level description of the functionality for which you're requesting this review, for example:
+       * `Functionality adds a new dataset to the Facility Locator so users can search for and view non-VA health providers on the map, as well as in list and detail views.`
+     * **Launch Date and Details**: `summary or link to launch plans, including any communication happening prior to launch` 
+     * **URL**: `link to your project on staging`
+     * **Product Guide**: `link to the Product Guide on Github`
+     * **Product Video**: `link to the demo video on Github` _\(If this file is too large to upload on github, the file can be emailed to the contact center POCs\)_
+     * **Product Video Transcript**: `link to the Product Video Transcript on Github`      
+2. **Within 3 business days**, the contact center POCs will review your Product Guide, Product Video, and Product Video Transcript. They will follow up with any questions or edits. After the materials have been finalized, the contact center team will send the content to the Contact Center.
+   * If you don't hear anything after 3 business days, reach out to your contact center POC.
+3. After sending your team's materials to the Contact Center, the contact center team will close the Github issue.
+   * Github will send the person who created the Github issue a notification. This is your team's signal that this pre-launch activity is complete.
+4. Requesting team members who participated in this collaboration, please complete brief [VSP Collaboration Cycle Feedback](https://adhoc.optimalworkshop.com/questions/20260uu8-0-0/questions/before) survey
 
-1. **Within 3 business days**, the contact center POCs will review your Product Guide, Product Video, and Product Video Transcript. They will follow up with any questions or edits. After the materials have been finalized, the contact center team will send the content to the Contact Center.
-    * If you don't hear anything after 3 business days, reach out to your contact center POC.
-1. After sending your team's materials to the Contact Center, the contact center team will close the Github issue.
-    * Github will send the person who created the Github issue a notification. This is your team's signal that this pre-launch activity is complete.
-1. Requesting team members who participated in this collaboration, please complete brief [VSP Collaboration Cycle Feedback](https://adhoc.optimalworkshop.com/questions/20260uu8-0-0/questions/before) survey

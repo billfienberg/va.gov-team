@@ -1,50 +1,45 @@
+# p2-session-report
+
 **Session Report**
 
 [Github Issue 10197](https://app.zenhub.com/workspace/o/department-of-veterans-affairs/vets.gov-team/issues/10197)
 
-# Participant Description
+## Participant Description
 
 Describe the participant in a few sentences, including their role within the system, why we’ve chosen them for a feedback session and relevant demographic information.
 
-# Key Findings
+## Key Findings
 
 1. Education content was a struggle, she seemed to relate GI Bill and VR&E together and struggled with them listed separately on the site
-
-2. She couldn't readily find how to "apply" for either health care or disability.  The option was there, but not in prominent placements
-
+2. She couldn't readily find how to "apply" for either health care or disability. The option was there, but not in prominent placements
 3. Although she stated that PTSD content was easy to find she struggled to find the right content to answer her question
-
-4. PTSD - not able to find info on self-treatment. Thought the PDF "understanding PTSD and PTSD self treatment" https://www.ptsd.va.gov/public/understanding_ptsd/booklet.pdf would provide some self-help tips, but it didn't
-
+4. PTSD - not able to find info on self-treatment. Thought the PDF "understanding PTSD and PTSD self treatment" [https://www.ptsd.va.gov/public/understanding\_ptsd/booklet.pdf](https://www.ptsd.va.gov/public/understanding_ptsd/booklet.pdf) would provide some self-help tips, but it didn't
 5. Was looking for a clear "apply" call to action for disability compensation. wasn't seeing it on va.gov, took a while to find
-
 6. Education benefits - had a hard time finding her way through the navigation to determine what education benefits VA provides
 
-   
-
-# Convergences 
+## Convergences
 
 What themes or ideas do we see here that we’ve seen elsewhere?
 
 1. ​
 
-# Divergences
+## Divergences
 
-What’s different about this interview? (note what’s different about this interview can easily become a convergence later)
-
-1. ​
-
-# Key Quotes:
+What’s different about this interview? \(note what’s different about this interview can easily become a convergence later\)
 
 1. ​
 
-# (Video and Audio Snippets)
+## Key Quotes:
+
+1. ​
+
+## \(Video and Audio Snippets\)
 
 Prove It
 
 1. ​
 
-## Discussion
+### Discussion
 
 A discussion covering the following points:
 

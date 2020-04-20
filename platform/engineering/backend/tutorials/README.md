@@ -38,4 +38,3 @@ append  config/settings.yml
 
 Note that you may need to scroll up within the terminal to see the list of files. The bundle command is run for you to ensure the module is installed in the host application, and its output is bookended by the generator's messages.
 
-

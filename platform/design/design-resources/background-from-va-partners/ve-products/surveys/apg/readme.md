@@ -1,3 +1,0 @@
-# APG
-
-Agency Priority Goal

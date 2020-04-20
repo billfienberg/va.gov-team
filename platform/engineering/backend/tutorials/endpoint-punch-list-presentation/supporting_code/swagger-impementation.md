@@ -1,5 +1,8 @@
+# swagger-impementation
+
 ## vets-api/app/swagger/requests/profile.rb
-````ruby
+
+```ruby
 module Swagger
   module Requests
     class Profile
@@ -28,10 +31,11 @@ module Swagger
     end
   end
 end
-````
+```
 
 ## vets-api/app/swagger/schemas/email.rb
-````ruby
+
+```ruby
 module Swagger
   module Schemas
     class Email
@@ -51,11 +55,11 @@ module Swagger
     end
   end
 end
-````
+```
 
+## vets-api/app/controllers/v0/apidocs\_controller.rb
 
-## vets-api/app/controllers/v0/apidocs_controller.rb
-````ruby
+```ruby
 ...
 
 # A list of all classes that have swagger_* declarations.
@@ -67,4 +71,5 @@ SWAGGERED_CLASSES = [
 ].freeze
 
 ...
-````
+```
+

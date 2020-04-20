@@ -1,6 +1,6 @@
 # Vets Website Form Tutorial - Advanced
 
-#### Using Common Definitions
+### Using Common Definitions
 
 All of our forms share schemas with the back-end through `vets-json-schema`, the repository where we store JSON Schemas for validating data submitted to a `vets-api` API endpoint. Assuming you've created one of those schemas, the next step is to incorporate that into your form, along with other common definitions we've built.
 
@@ -8,7 +8,7 @@ All of our forms share schemas with the back-end through `vets-json-schema`, the
 
 Assuming you've created your form using our form scaffolding generator, you should have some commented out lines in your `config/form.js` file:
 
-```js
+```javascript
 // import fullSchema from 'vets-json-schema/dist/VIC-schema.json';
 
 // ...code omitted...
@@ -20,7 +20,7 @@ Assuming you've created your form using our form scaffolding generator, you shou
 
 If you uncomment those lines and update the import path to match your schema's file name, you can start pulling in individual definitions and properties to use in your form. We try to use the properties from the shared schema as much as possible, since it helps keep the front-end and back-end in sync and avoid validation errors in production. For example, if you want to import an `email` field from your schema, you can do something like this:
 
-```js
+```javascript
 import fullSchema from 'vets-json-schema/dist/VIC-schema.json';
 
 // ...code omitted...
@@ -58,7 +58,7 @@ Here we're using Javascript's object shorthand syntax to set the `email` propert
 
 We have a collection of common definitions and fields on the front-end for you to use in your form. Let's try using our common full name field:
 
-```js
+```javascript
 import fullSchema from 'vets-json-schema/dist/VIC-schema.json';
 import fullNameUI from 'platform/forms/definitions/fullName';
 // ...code omitted...
@@ -104,7 +104,7 @@ Finally, in the code you can see that we're using `fullNameUI` in the `uiSchema`
 
 Often you'll need to slightly modify common definitions on the front-end to change a label or some conditional logic. The way we typically do that is to use our data utilities to set values on the schema. For example, say we needed to make our `veteranFullName` field expand underneath another field:
 
-```js
+```javascript
 import _ from 'lodash/fp';
 import fullSchema from 'vets-json-schema/dist/VIC-schema.json';
 import fullNameUI from 'platform/forms/definitions/fullName';
@@ -150,17 +150,16 @@ const formConfig = {
 };
 ```
 
-We've imported the [Lodash FP (functional programming) library](https://github.com/lodash/lodash/wiki/FP-Guide) and using its `merge` function to merge our `ui:options` into the `fullNameUI` object, so that we don't have to redefine all of the configuration in there. All of the Lodash FP methods treat objects as immutable, not modifying anything you pass in to them, so you can reuse `fullNameUI` in another spot in your form without worrying about having to remove the `ui:options` configuration we added.
+We've imported the [Lodash FP \(functional programming\) library](https://github.com/lodash/lodash/wiki/FP-Guide) and using its `merge` function to merge our `ui:options` into the `fullNameUI` object, so that we don't have to redefine all of the configuration in there. All of the Lodash FP methods treat objects as immutable, not modifying anything you pass in to them, so you can reuse `fullNameUI` in another spot in your form without worrying about having to remove the `ui:options` configuration we added.
 
 ## Things to watch out for
 
 The point of having these common definitions and sharing a schema between the front-end and back-end is to encourage consistency in our forms and to reduce errors when submitting a form to a `vets-api` endpoint. But following the guide above won't completely prevent those issues. Here are some things to keep in mind:
 
-- Since we're importing individual fields from `fullSchema`, it can be easy to miss required field rules, since we often import those directly. Make sure you're marking all the necessary fields as required in your form config.
-- Importing individual fields makes it easy to group them in ways specific to the front-end, so make sure if you are grouping things, you're using property names prefixed with `view:` to remove that grouping before submitting.
-
-<hr>
+* Since we're importing individual fields from `fullSchema`, it can be easy to miss required field rules, since we often import those directly. Make sure you're marking all the necessary fields as required in your form config.
+* Importing individual fields makes it easy to group them in ways specific to the front-end, so make sure if you are grouping things, you're using property names prefixed with `view:` to remove that grouping before submitting.
 
 Back: [Vets Website Form Tutorial - Intermediate](form-tutorial-intermediate.md)
 
 Next: [Vets Website Writing Tests](writing-tests.md)
+

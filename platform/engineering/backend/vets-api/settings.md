@@ -1,17 +1,14 @@
-# Vets API Settings
+# settings
 
-Settings are used to provide any values that may differ between
-environments.
+## Vets API Settings
 
-To access these values, reference the `Settings` object, which is available
-in the global application namespace. Add settings keys and values to the
-`./config/settings.yml` file.
+Settings are used to provide any values that may differ between environments.
 
-For instance, new integrations should have an `enabled`
-boolean setting that will be set to `false` in the production environment until
-the final review process for the integration is completed.
+To access these values, reference the `Settings` object, which is available in the global application namespace. Add settings keys and values to the `./config/settings.yml` file.
 
-```
+For instance, new integrations should have an `enabled` boolean setting that will be set to `false` in the production environment until the final review process for the integration is completed.
+
+```text
 # config/settings.yml
 my_external_service:
   enabled: false
@@ -25,16 +22,15 @@ my_external_service:
 ...
 ```
 
-# Settings in the development, staging, and production Vets.gov environments
+## Settings in the development, staging, and production Vets.gov environments
 
-**Settings in non-local environments are managed by the Platform team. Changes to settings (new settings, changed settings, or removed settings) must be coordinated with them.** To coordinate with the Platform team on Settings, post a request in the *#vfs-platform-support* Slack channel.
+**Settings in non-local environments are managed by the Platform team. Changes to settings \(new settings, changed settings, or removed settings\) must be coordinated with them.** To coordinate with the Platform team on Settings, post a request in the _\#vfs-platform-support_ Slack channel.
 
-## Overriding Settings
+### Overriding Settings
 
-Often it may be useful to override settings in `./config/settings.yml` during development. Provide the new value to `./config/settings.local.yml`, and this value will be used instead of the default. The `./config/settings.local.yml`
-file is maintained locally, and should not be committed to git.
+Often it may be useful to override settings in `./config/settings.yml` during development. Provide the new value to `./config/settings.local.yml`, and this value will be used instead of the default. The `./config/settings.local.yml` file is maintained locally, and should not be committed to git.
 
-```
+```text
 # config/settings.yml
 my_external_service:
   enabled: false
@@ -52,13 +48,13 @@ my_external_service:
 ...
 ```
 
-## Secrets
+### Secrets
 
-Secret configuration settings, including internal IP addresses, access tokens, private keys, and passwords, are configured by the [name.gov] Platform team, and exposed to your integration as it's running on the deployed environment. These settings may be accessed via the `Settings` object available in the global application namespace.
+Secret configuration settings, including internal IP addresses, access tokens, private keys, and passwords, are configured by the \[name.gov\] Platform team, and exposed to your integration as it's running on the deployed environment. These settings may be accessed via the `Settings` object available in the global application namespace.
 
 You're most likely going to use this system to access credentials used to authenticate against VA services.
 
-Provide sane defaults in `config/settings.yml` that other developers can use locally, and which are safe to provide to the public. Contact the [name.gov] Platform team to arrange secure delivery and configuration of the settings that will be used in the [name.gov] development, staging, and production environments.
+Provide sane defaults in `config/settings.yml` that other developers can use locally, and which are safe to provide to the public. Contact the \[name.gov\] Platform team to arrange secure delivery and configuration of the settings that will be used in the \[name.gov\] development, staging, and production environments.
 
 ```ruby
 # config/settings.yml
@@ -88,8 +84,7 @@ end
 # TODO: apply Settings.my_external_service.secret to headers for the service.  Would be awesome to have a way to do this in the service configuration, or at least in an easier to understand way.
 ```
 
-<hr>
-
 Back: [Vets API Service Objects](service-objects.md)
 
-Next: [Vets API Punch List](vets-api-endpoint-punch-list.md)
+Next: [Vets API Punch List](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/backend/vets-api/vets-api-endpoint-punch-list.md)
+

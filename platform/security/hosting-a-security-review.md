@@ -18,8 +18,8 @@ This list of questions is _not_ intended to be comprehensive. It _is_ intended t
 
 #### Logs
 
-* Are there any new logging statements? (FE or BE). This includes data sent to Sentry, Cloudwatch, Google Analytics, ...?
-* What kinds of information are logged in the new logging? Is there anything that uniquely identifies a user (Personally Identifiable Information)?
+* Are there any new logging statements? \(FE or BE\). This includes data sent to Sentry, Cloudwatch, Google Analytics, ...?
+* What kinds of information are logged in the new logging? Is there anything that uniquely identifies a user \(Personally Identifiable Information\)?
 
 #### User tracking / identity
 
@@ -29,7 +29,7 @@ This list of questions is _not_ intended to be comprehensive. It _is_ intended t
 ### Security
 
 * How are systems authenticating with one another?
-* Is anyone bypassing any obvious built-in protections? (CSRF protection in form submissions, auto-escaping in FE template rendering systems, use of `innerHTML`)
+* Is anyone bypassing any obvious built-in protections? \(CSRF protection in form submissions, auto-escaping in FE template rendering systems, use of `innerHTML`\)
 
 #### Frontend
 
@@ -40,37 +40,38 @@ This list of questions is _not_ intended to be comprehensive. It _is_ intended t
 #### Backend
 
 * Are there any new REST endpoints exposed by `vets-api`, or new behavior change on existing endpoints?
-    * What new interactions are allowed?
-    * Is there any new risky data being sent to `vets-api` (XML, file uploads, etc.)?
-    * How could this endpoint be misused?
+  * What new interactions are allowed?
+  * Is there any new risky data being sent to `vets-api` \(XML, file uploads, etc.\)?
+  * How could this endpoint be misused?
 * Are there new integrations with VA backends?
-    * What data are we sending to this backend?
-    * How could this backend integration be misused?
+  * What data are we sending to this backend?
+  * How could this backend integration be misused?
 
 ### Infrastructure readiness
 
 #### Traffic
 
 * How much new traffic are you expecting to send to `vets-api`?
-    * Consider both average (typical weekday traffic) and burst (e.g. an email blast to Veterans)
+  * Consider both average \(typical weekday traffic\) and burst \(e.g. an email blast to Veterans\)
 
 #### Rollout
 
 * What's your rollout plan? Specifically:
-    * What % of users are you rolling out to at each phase?
-    * What metrics are you looking at before deciding to continue rollout?
+  * What % of users are you rolling out to at each phase?
+  * What metrics are you looking at before deciding to continue rollout?
 
 #### Incident response
 
 * Is there a playbook for investigating and handling likely failure modes?
 * Are there new integrations with VA backends?
-    * What is this backend's latency/availability profile?
-    * Do we have points of contact for each new backend, in case of outages or security incidents? (TODO: link to where these should be stored/documented)
+  * What is this backend's latency/availability profile?
+  * Do we have points of contact for each new backend, in case of outages or security incidents? \(TODO: link to where these should be stored/documented\)
 
 #### SLO definition
 
-*Note: tentative while SLO infrastructure work is underway*
+_Note: tentative while SLO infrastructure work is underway_
 
 * Are there any new REST endpoints exposed on `vets-api`?
-    * Do all new endpoints exposed on `vets-api` have availability + latency expectations?
-    * Are those expectations configured in our SLO monitoring system? (TODO)
+  * Do all new endpoints exposed on `vets-api` have availability + latency expectations?
+  * Are those expectations configured in our SLO monitoring system? \(TODO\)
+

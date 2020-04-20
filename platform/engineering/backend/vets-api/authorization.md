@@ -35,7 +35,6 @@ module MyIntegration
 end
 ```
 
-
 ## Within an Action
 
 ```ruby
@@ -63,17 +62,15 @@ There are certain limitations of authorization and in some circumstances it is w
 
 Raising an error that says a user is not authorized to access something implies that that resource exists. In certain circumstances we would not want to leak this information and it would be preferable to instead use a 404 Not Found.
 
-For example,
-Open up your web browser in incognito mode and attempt to access a resource known to exist such as: https://github.com/department-of-veterans-affairs/va.gov-team
+For example, Open up your web browser in incognito mode and attempt to access a resource known to exist such as: [https://github.com/department-of-veterans-affairs/va.gov-team](https://github.com/department-of-veterans-affairs/va.gov-team)
 
 You should see a 404 Response.
 
 ## Further Reading
 
-1. https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/products/identity-personalization/login/reference-documents/auth/authentication-and-authorization.md
-
-<hr>
+1. [https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/products/identity-personalization/login/reference-documents/auth/authentication-and-authorization.md](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/products/identity-personalization/login/reference-documents/auth/authentication-and-authorization.md)
 
 Back: [Vets API Authentication](authentication.md)
 
 Next: [Vets API Documentation](documentation.md)
+

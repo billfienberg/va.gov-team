@@ -8,7 +8,7 @@ Our schemas live in [src/schemas](https://github.com/department-of-veterans-affa
 
 Let's say we're creating a schema for form 21-22. We could create a file at `src/schema/21-22/schema.js` that looks like this:
 
-```js
+```javascript
 import schemaHelpers from '../../common/schema-helpers';
 
 let schema = {
@@ -36,11 +36,11 @@ We've filled in the title from the paper form, and left the definitions and prop
 
 ## Defining your fields
 
-Once you have the basic file structure, you'll want to start adding the fields you need. You'll probably want to dive into learning JSON Schema at this point, but the basics aren't too complicated (the non-basics can definitely be complicated!). Often we will start from the paper form and start adding fields for all of the data in the form.
+Once you have the basic file structure, you'll want to start adding the fields you need. You'll probably want to dive into learning JSON Schema at this point, but the basics aren't too complicated \(the non-basics can definitely be complicated!\). Often we will start from the paper form and start adding fields for all of the data in the form.
 
 So, for example, the 21-22 form has a name field. We have a common name definition, so we can add that to our schema:
 
-```js
+```javascript
 [
   ['privacyAgreementAccepted'],
   ['fullName', 'veteranFullName']
@@ -51,7 +51,7 @@ So, for example, the 21-22 form has a name field. We have a common name definiti
 
 We're pulling in the `fullName` definition, and by adding a second item called `veteranFullName` to the array, we're adding it to the schema with that name, instead of `fullName`. If you were to run `npm run build` at this point, you would see a schema in `dist/21-22.schema.json` that looked like:
 
-```json
+```javascript
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "APPOINTMENT OF VETERANS SERVICE ORGANIZATION AS CLAIMANT'S REPRESENTATIVE",
@@ -113,7 +113,7 @@ We're pulling in the `fullName` definition, and by adding a second item called `
 
 You can see that we have a `veteranFullName` field and the definition for it pulled in now. You can also add your custom fields, that aren't common definitions. The 21-22 form has a "Name and Job Title of Official Representative" field, so we can add that as a string field:
 
-```js
+```javascript
 import schemaHelpers from '../../common/schema-helpers';
 
 let schema = {
@@ -153,7 +153,7 @@ A couple of rules of thumb will help make the schema easier to use on both the f
 
 Once you've got your schema written, you can write some unit tests for it. Unit tests go in `/test`, so for the 21-22 form we would create a file at `test/21-22/schema.spec.js` that looks like:
 
-```js
+```javascript
 import SchemaTestHelper from '../../support/schema-test-helper';
 import schemas from '../../../dist/schemas';
 import fixtures from '../../support/fixtures';
@@ -209,8 +209,7 @@ You will need to replace `<commit>` with the Git hash for the commit where your 
 
 Run `bundle update vets_json_schema` and everything should be updated correctly.
 
-<hr>
-
 Back: [Vets Website Form Map](form-map.md)
 
 Next: [Vets API Introduction](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/engineering/backend/vets-api/README.md)
+

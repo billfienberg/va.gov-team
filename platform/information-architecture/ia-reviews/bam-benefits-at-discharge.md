@@ -1,4 +1,5 @@
 # IA Review and Recommendations
+
 **STATUS: NOT STARTED**
 
 **Team:** BAM 1
@@ -7,55 +8,46 @@
 
 **Background/Context:** The BDD program allows Service members to apply for their disability benefits before separation.
 
-**IA Completed Date:** 
+**IA Completed Date:**
 
-**IA Review Issue:** 
+**IA Review Issue:**
 
-<hr>
+## IA Structure, URLs and Breadcrumbs 
 
-### IA Structure, URLs and Breadcrumbs <br>
-*Description of IA or link to site map documentation, the final URLs to be used and breadcrumb requirements. *
+_Description of IA or link to site map documentation, the final URLs to be used and breadcrumb requirements._ 
 
 **Approach:**
 
-- 
+* 
+| Page | URL | Breadcrumb |
+| :--- | :--- | :--- |
 
-
-Page | URL | Breadcrumb
---- | --- | ---
 
 **General Details**
-- Please connect with your writer/editor on the proper verbiage and capitalization of the last element of the breadcrumb
 
-<hr>
+* Please connect with your writer/editor on the proper verbiage and capitalization of the last element of the breadcrumb
 
-### Navigation Changes and Entry and Exit Points <br>
-*The primary entry points and changes to global navigation, as well as any potential crosslinking opportunities*
+## Navigation Changes and Entry and Exit Points 
 
-Priority | Placement | Description
---- | --- | ---
+_The primary entry points and changes to global navigation, as well as any potential crosslinking opportunities_
 
-***Priority:** Must = Required; Should = Strongly encouraged/best practice; Consider = Suggestion/at your discretion/possible enhancement* 
-
-<hr>
-
-### Redirects <br>
-*Identify if any redirects are needed.  This is not intended to be a complete and final list of redirect needs, but directional information only.*  
-
-- 
-
-Please submit a request for the redirect using the [Redirect Request Issue Template](https://github.com/department-of-veterans-affairs/va.gov-team/issues/new?assignees=mnorthuis&labels=content-ia-team%2C+ia&template=redirect-request.md&title=Redirect+Request) at least 2 weeks in advance. 
-*For more information, see the [Redirect Request Process](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/information-architecture/request-redirect.md).*
+| Priority | Placement | Description |
+| :--- | :--- | :--- |
 
 
-<hr>
+**\*Priority:** Must = Required; Should = Strongly encouraged/best practice; Consider = Suggestion/at your discretion/possible enhancement\*
 
-### Additional Details/Recommendations
+## Redirects 
 
-<hr>
-<hr>
+_Identify if any redirects are needed. This is not intended to be a complete and final list of redirect needs, but directional information only._
 
-### Meetings Notes and Background Info
+* Please submit a request for the redirect using the [Redirect Request Issue Template](https://github.com/department-of-veterans-affairs/va.gov-team/issues/new?assignees=mnorthuis&labels=content-ia-team%2C+ia&template=redirect-request.md&title=Redirect+Request) at least 2 weeks in advance. _For more information, see the_ [_Redirect Request Process_](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/information-architecture/request-redirect.md)_._
+
+## Additional Details/Recommendations
+
+## Meetings Notes and Background Info
 
 **Usability testing prep - 3/9/2020**
-- IA feedback issue: https://github.com/department-of-veterans-affairs/va.gov-team/issues/6692
+
+* IA feedback issue: [https://github.com/department-of-veterans-affairs/va.gov-team/issues/6692](https://github.com/department-of-veterans-affairs/va.gov-team/issues/6692)
+

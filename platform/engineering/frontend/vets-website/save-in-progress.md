@@ -2,15 +2,15 @@
 
 Forms on Vets.gov support the ability to save them in progress to a user's account and resume them later. Enabling Save in Progress requires
 
-- Configuring naming and messaging options in the **Form config**.
-- Making the Save In Progress form retrievable on the **User profile** page.
-- Adding links to the Save In Progress on **Static pages**.
+* Configuring naming and messaging options in the **Form config**.
+* Making the Save In Progress form retrievable on the **User profile** page.
+* Adding links to the Save In Progress on **Static pages**.
 
 ## Form config
 
-There are several configuration options related to Save in Progress (SiP).
+There are several configuration options related to Save in Progress \(SiP\).
 
-```js
+```javascript
 const formConfig = {
   formId: '1010ez',
   version: 0,
@@ -25,7 +25,7 @@ const formConfig = {
 
 This is from our health care application. The most important piece of information is `formId`, which is the key that will be used to save the form data on the backend. Once you choose this, you can't change it in production. We also set a version, typically to 0, which can be incremented if you need to migrate form data in production.
 
-There are also a couple of messages you can set, which show up in various places on the form (primarily on the intro page).
+There are also a couple of messages you can set, which show up in various places on the form \(primarily on the intro page\).
 
 ## User profile
 
@@ -47,7 +47,7 @@ widgets:
 
 And somewhere in the file, where you want the widget to show up:
 
-```html
+```markup
 <div id="react-applicationStatus" class="static-page-widget">
   <a class="usa-button-primary va-button-primary" href="/health-care/apply/application/">Apply for Health Care Benefits</a>
 </div>
@@ -57,7 +57,7 @@ Note that the id matches the `root` property in the front matter. This is the li
 
 Once that's done, you can open up the static pages entry file at `src/applications/static-pages/static-pages-entry.js` and make your changes. Here's an example for the healh care application:
 
-```js
+```javascript
 const healthcarePages = new Set(['/health-care/', '/health-care/apply/', '/health-care/eligibility/']);
 
 ...
@@ -76,10 +76,9 @@ The main things to note are the set of URLs where this widget will be active. Th
 
 Once you've got all that set up, your form should appear on the profile page:
 
-![](../../assets/saved_form.png)
-
-<hr>
+![](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/assets/saved_form.png)
 
 Back: [Vets Website Submitting to API](submitting-to-api.md)
 
 Next: [Vets Website Forms in Production](forms-in-production.md)
+

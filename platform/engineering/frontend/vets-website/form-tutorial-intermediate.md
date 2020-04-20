@@ -8,7 +8,7 @@ Now that you've gone through and created a really simple form using the tutorial
 
 Because our forms are based on JSON Schema, you can rely on the built in types and pattern property to do a lot of your validation. However, sometimes you need validation rules that go beyond what JSON Schema offers. To write custom validation, we have a `ui:validations` helper:
 
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -35,12 +35,11 @@ page1: {
 }
 ```
 
-`ui:validations` takes an array of functions, each of which is passed an errors object and the field data (plus some other parameters). So in the above example, if a user puts 'badString' in `myField`, then the form will display a validation error with the message passed in `addError()`.
+`ui:validations` takes an array of functions, each of which is passed an errors object and the field data \(plus some other parameters\). So in the above example, if a user puts 'badString' in `myField`, then the form will display a validation error with the message passed in `addError()`.
 
 One thing to note is that you can add `ui:validations` on any field or object in `uiSchema`, which allows you to validate groups of fields together:
 
-
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -79,8 +78,7 @@ Since we moved the validation array up to the root of `uiSchema`, the field data
 
 In addition to the above custom validation, you can also customize the messages for the built in JSON Schema validation. For example, if I have some pattern validation, I can set an understandable message:
 
-
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -108,7 +106,7 @@ page1: {
 
 In some cases you may want to have fields be required only under certain conditions. To handle that, you can use the `ui:required` helper:
 
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -149,7 +147,7 @@ TODO: expandUnder image
 
 To do that, you can use the `expandUnder` option:
 
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -185,8 +183,7 @@ In the above example, `myConditionalField` will display whenever `myField` has a
 
 If you just need to hide or show a field, without the expand under treatment, you can use `hideIf`:
 
-
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -216,13 +213,13 @@ page1: {
 }
 ```
 
-In the above example, `myConditionalField` is hidden when `myField` is not true (meaning it's false or undefined).
+In the above example, `myConditionalField` is hidden when `myField` is not true \(meaning it's false or undefined\).
 
 ## Conditional pages
 
 Another situation you may encounter is needing to make an entire page of the form conditional. You can do that with the `depends` property:
 
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -252,7 +249,7 @@ In some cases, you may have fields that you don't need to submit along with the 
 
 To keep a field from being submitted, you can prefix it with `view:`:
 
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -282,7 +279,7 @@ Since we've prefixed `confirmEmail` with `view:`, that field will be removed bef
 
 If you prefix an object with `view:`, some slightly different will happen:
 
-```js
+```javascript
 page1: {
   path: 'first-page',
   title: 'First Page',
@@ -312,7 +309,7 @@ page1: {
 
 In this case, the form data that's submitted when a user completes a form would be:
 
-```js
+```javascript
 {
   email: 'test@test.com',
   confirmEmail: 'test@test.com'
@@ -321,7 +318,7 @@ In this case, the form data that's submitted when a user completes a form would 
 
 If we had left off the `view:` prefix it would be:
 
-```js
+```javascript
 {
   emails: {
     email: 'test@test.com',
@@ -332,8 +329,7 @@ If we had left off the `view:` prefix it would be:
 
 That should get you started with some of the common validation and conditional field scenarios. Many of the options above have extra parameters or options that may help with some less common scenarios, so make sure to check the form config spec for a full picture of all the options offered.
 
-<hr>
-
 Back: [Vets Website Form Tutorial - Basic](form-tutorial-basic.md)
 
 Next: [Vets Website Form Tutorial - Advanced](form-tutorial-advanced.md)
+

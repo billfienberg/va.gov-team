@@ -1,12 +1,14 @@
+# p1-session-report
+
 **Session Report**
 
 [Github Issue 10197](https://app.zenhub.com/workspace/o/department-of-veterans-affairs/vets.gov-team/issues/10197)
 
-# Participant Description
+## Participant Description
 
 Describe the participant in a few sentences, including their role within the system, why we’ve chosen them for a feedback session and relevant demographic information.
 
-# Key Findings
+## Key Findings
 
 1. ​She really had a lot to say, and all of it was really quite powerful. There are so many quotes in this interview and so many great nuggets. 
 2. She really hit home on the sense of forward progress and how she wasn't getting that from this site. She used the analogy of "hopping and skipping around on lilly pads...but no feeling of forward progress"  
@@ -17,29 +19,29 @@ Describe the participant in a few sentences, including their role within the sys
 7. she made reference to Voc Rehab not technically being an education benefit...I'm making this note more for myself, as this is such a fuzzy area
 8. she spoke a lot about PTSD and overwhelmed Veterans and how the information available is comprehensive but not easy - what is there is not geared towards those that are struggling in the VA, and she feels that is more than the case than those that are not struggling.  She defines them as smart and capable but need forward momentum, don't talk down to them but don't overwhelm.
 
-# Convergences 
+## Convergences
 
 What themes or ideas do we see here that we’ve seen elsewhere?
 
 1. ​
 
-# Divergences
+## Divergences
 
-What’s different about this interview? (note what’s different about this interview can easily become a convergence later)
-
-1. ​
-
-# Key Quotes:
+What’s different about this interview? \(note what’s different about this interview can easily become a convergence later\)
 
 1. ​
 
-# (Video and Audio Snippets)
+## Key Quotes:
+
+1. ​
+
+## \(Video and Audio Snippets\)
 
 Prove It
 
 1. ​
 
-## Discussion
+### Discussion
 
 A discussion covering the following points:
 

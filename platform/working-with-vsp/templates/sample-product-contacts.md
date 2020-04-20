@@ -1,7 +1,6 @@
 # Product Points of Contact
 
-These are the team members we will attempt to contact first with regard to
-department-specific questions.
+These are the team members we will attempt to contact first with regard to department-specific questions.
 
 ## Product
 
@@ -44,3 +43,4 @@ department-specific questions.
 **Contact first name:**
 
 **Github username:**
+

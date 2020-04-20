@@ -1,14 +1,14 @@
-## How to collaborate on documents
+# How to collaborate on documents
 
-Most document updates and revisions are pretty easy. Make your change in the `master` branch (or upload your document) and commit. This simple way should be used for documents that are being added/edited, but don't need too much collaboration or there isn't anyone else likely to edit it before adding it to the repo (and if it turns out there is, someone can always change it later).
+Most document updates and revisions are pretty easy. Make your change in the `master` branch \(or upload your document\) and commit. This simple way should be used for documents that are being added/edited, but don't need too much collaboration or there isn't anyone else likely to edit it before adding it to the repo \(and if it turns out there is, someone can always change it later\).
 
 For documents that require multiple people to contribute ideas, feedback, and edits; the following is the best approach:
 
-- Create a branch for the document(s) to add/edit
-- Commit initial draft(s) of document(s)
-- Open a pull request for the branch
-- In the pull request, tag or assign to people that need to collaborate (This creates a space for folks to discuss and submit changes)
-- After the collaborating group agrees on the document, merge the pull request
+* Create a branch for the document\(s\) to add/edit
+* Commit initial draft\(s\) of document\(s\)
+* Open a pull request for the branch
+* In the pull request, tag or assign to people that need to collaborate \(This creates a space for folks to discuss and submit changes\)
+* After the collaborating group agrees on the document, merge the pull request
 
 An example of when this might be needed is: editing this document, where it explains how the team operates and it's good to get feedback/buy-in before changing the team's existing practice.
 
@@ -16,7 +16,7 @@ For documents that require collaboration, Markdown is the desired format. It's r
 
 ['Markdown Basics'](https://help.github.com/articles/markdown-basics/) is a great place to start, but here's a quick nutshell version:
 
-```
+```text
 # Heading 1
 
 ## Heading 2
@@ -49,4 +49,5 @@ Here is a [link to Google](http://google.com)
 Look at the ![picture](path/to/picture.png)
 ```
 
-Markdown can easily be exported to HTML, DOC, and PDF. There are a bunch of converters available online or apps like Mou (Mac) or Markdown Pad (Windows). Atom is an editor too that has syntax highlighting.
+Markdown can easily be exported to HTML, DOC, and PDF. There are a bunch of converters available online or apps like Mou \(Mac\) or Markdown Pad \(Windows\). Atom is an editor too that has syntax highlighting.
+

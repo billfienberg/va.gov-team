@@ -8,7 +8,7 @@ Vets.gov systems may process sensitive information that must be protected from u
 
 ## Exchanging Information over a Public Channel
 
-Sensitive information should never be exchanged in plain text over a public channel. Utilize the VA's email-based encryption when possible. Temporary keys and tokens may be transmitted via Keybase. Personal information must be encrypted with GPG before transmission and sent only to verified parties. Lync _File Transfer_ may be used to transmit sensitive information, but secrets should never be sent via Lync messages.  
+Sensitive information should never be exchanged in plain text over a public channel. Utilize the VA's email-based encryption when possible. Temporary keys and tokens may be transmitted via Keybase. Personal information must be encrypted with GPG before transmission and sent only to verified parties. Lync _File Transfer_ may be used to transmit sensitive information, but secrets should never be sent via Lync messages.
 
 ## Password/Authentication Resets
 
@@ -32,8 +32,7 @@ Cryptographic keys should be managed by Amazon's KMS when possible. This provide
 
 ### PostgreSQL
 
-Vets.gov's application database, which may contain sensitive information, is
-encrypted at rest with Amazon's KMS-based RDS encryption (AES-256).
+Vets.gov's application database, which may contain sensitive information, is encrypted at rest with Amazon's KMS-based RDS encryption \(AES-256\).
 
 Unless there are explicitly defined reasons otherwise, future RDS databases should be encrypted with KMS by default.
 
@@ -47,8 +46,7 @@ Sensitive information is not currently stored on EBS volumes. Future EBS volumes
 
 ### S3
 
-S3 buckets for internal use should encrypt content with Amazon S3-Managed Keys
-or Amazon KMS-Managed Keys (AES-256).
+S3 buckets for internal use should encrypt content with Amazon S3-Managed Keys or Amazon KMS-Managed Keys \(AES-256\).
 
 ### SSH Keys
 
@@ -60,19 +58,21 @@ Associated private keys must never be transmitted over a public channel. If ther
 
 SSL certificates are used for encrypting communication channels for users and traffic to several services on the VA network. Additionally, client-side certificate authentication is utilized for services on the VA network.
 
-* Communication with external users occurs via a commercially provided certificate (SSLMate).
-* Communication with VA services on the VA network occurs via certificates provided by the VA PKI team (https://github.com/department-of-veterans-affairs/devops/blob/master/docs/StandardOperatingProcedures/CreatingVASignedSSLCertificate.md).
+* Communication with external users occurs via a commercially provided certificate \(SSLMate\).
+* Communication with VA services on the VA network occurs via certificates provided by the VA PKI team \([https://github.com/department-of-veterans-affairs/devops/blob/master/docs/StandardOperatingProcedures/CreatingVASignedSSLCertificate.md](https://github.com/department-of-veterans-affairs/devops/blob/master/docs/StandardOperatingProcedures/CreatingVASignedSSLCertificate.md)\).
 * Internal communication with the Vets.gov forward proxy utilizes a self-signed
+
   SSL certificate.
 
 Client-side authentication should be negotiated by the Vets.gov forward proxy system. These keys should not made directly available to the application.
 
 ## Application Level
 
-Secrets must not be included in application source. The application may receive protected keys and secrets as part of the deployment process. These keys will be encrypted and secured in Credstash (KMS-backed).
+Secrets must not be included in application source. The application may receive protected keys and secrets as part of the deployment process. These keys will be encrypted and secured in Credstash \(KMS-backed\).
 
 The application should keep protected information and keys in memory and not on disk. Sensitive information should be protected by user accounts and permissions on the underlying system when disk storage is required. The underlying disk should be encrypted.
 
-Where possible, the application should delegate authentication and secret management to an isolated internal system (such as the forward proxy).
+Where possible, the application should delegate authentication and secret management to an isolated internal system \(such as the forward proxy\).
 
 Documentation should be provided for each key to permit regeneration in the event of compromise.
+

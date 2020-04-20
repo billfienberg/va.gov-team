@@ -1,12 +1,12 @@
 # Table of Conents
 
-1. [Introduction](#introduction)
-2. [Web Console Usage](#web-console-usage)
-3. [CLI Usage](#CLI-usage)
-4. [CLI Requirements and Environment Setup](#CLI-Requirements)
-5. [SSM Helper Script](#SSM-helper-script)
-6. [End-to-End Demo with the CLI](#Demo)
-7. [Troubleshooting](#troubleshooting) - Some common errors and how to fix them
+1. [Introduction](aws-shell-access.md#introduction)
+2. [Web Console Usage](aws-shell-access.md#web-console-usage)
+3. [CLI Usage](aws-shell-access.md#CLI-usage)
+4. [CLI Requirements and Environment Setup](aws-shell-access.md#CLI-Requirements)
+5. [SSM Helper Script](aws-shell-access.md#SSM-helper-script)
+6. [End-to-End Demo with the CLI](aws-shell-access.md#Demo)
+7. [Troubleshooting](aws-shell-access.md#troubleshooting) - Some common errors and how to fix them
 
 ## Introduction
 
@@ -14,25 +14,22 @@ Previously gaining shell access to instances meant setting your `ssh` options an
 
 A session can be started via the AWS web console or on the CLI.
 
-The CLI tool offers the look and feel of a typical SSH experience, but does require some [setup locally](#cli-requirements).
+The CLI tool offers the look and feel of a typical SSH experience, but does require some [setup locally](aws-shell-access.md#cli-requirements).
 
 ## Web Console Usage
 
-The web console experience begins here https://console.amazonaws-us-gov.com/systems-manager/session-manager/sessions?region=us-gov-west-1.
-![purpose_tags](../images/ssm-console.png)
-Along the top there are two tabs; 'Sessions' and 'Session history'. 
+The web console experience begins here [https://console.amazonaws-us-gov.com/systems-manager/session-manager/sessions?region=us-gov-west-1](https://console.amazonaws-us-gov.com/systems-manager/session-manager/sessions?region=us-gov-west-1). ![purpose\_tags](../../.gitbook/assets/ssm-console.png) Along the top there are two tabs; 'Sessions' and 'Session history'.
 
-You can start a web only session without having to use the CLI tool. Click the yellow button in the right corner labelled 'Start session'.
-![purpose_tags](../images/ssm-start-session.png)
+You can start a web only session without having to use the CLI tool. Click the yellow button in the right corner labelled 'Start session'. ![purpose\_tags](../../.gitbook/assets/ssm-start-session.png)
 
-Filtering here is a little strange and does not accept wild cards. You can page through all instances which are currently reporting to the service and select one to begin a session:
-![purpose_tags](../images/ssm-web-session.png)
+Filtering here is a little strange and does not accept wild cards. You can page through all instances which are currently reporting to the service and select one to begin a session: ![purpose\_tags](../../.gitbook/assets/ssm-web-session.png)
 
 This acts like a typical terminal and can be exited when complete.
 
 ## CLI Usage
 
 The script is run thusly:
+
 ```bash
 ./ssm.sh [APP_NAME] [APP_ENV] [auto]
 # APP_NAME corresponds to the EC2 tag 'Purpose'
@@ -47,19 +44,19 @@ The script is run thusly:
 
 `APP_NAME` or 'Purpose' does correspond to what we think of as apps:
 
-![purpose_tags](../images/purpose-tags.png)
+![purpose\_tags](../../.gitbook/assets/purpose-tags.png)
 
 and likewise for `APP_ENV` environment:
 
-![environment_tags](../images/environment-tags.png)
+![environment\_tags](../../.gitbook/assets/environment-tags.png)
 
 ### CLI Requirements
 
 Use the following sections to setup each of the SSM connection requirements.
 
-- `ssm.sh` helper script
-- AWS IAM permissions for your user account
-- Docker
+* `ssm.sh` helper script
+* AWS IAM permissions for your user account
+* Docker
 
 ### SSM helper script
 
@@ -68,6 +65,7 @@ The SSM script helps translate a need to connect to the shell of a specific inst
 ### Demo
 
 Installing and verifying:
+
 ```bash
 ➜  tmp curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -93,6 +91,7 @@ The Session Manager plugin was installed successfully. Use the AWS CLI to start 
 ```
 
 Using the bash helper script:
+
 ```bash
 (venv27) ➜  tmp ssm.sh vets-api dev
 Finding apps for vets-api dev
@@ -142,6 +141,7 @@ exit
 
 Exiting session with sessionId: Ryan.Watson-0b9a893d88b3b8f6d.
 ```
+
 _Note_
 
 The ability to query and list available servers does not imply you can start a session on a server.
@@ -168,3 +168,4 @@ aws: error: argument operation: Invalid choice, valid choices are:
 ```
 
 This means that the newish `aws ssm start-session` subcommand wasn't found. Upgrade the version of `aws-cli` so the new subcommand is available.
+

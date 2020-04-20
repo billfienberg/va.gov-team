@@ -1,52 +1,54 @@
+# session-report-template
+
 **Session Report**
 
-Project : [Link to Project Directory]
+Project : \[Link to Project Directory\]
 
-[Link to Research Goals & Plan]
+\[Link to Research Goals & Plan\]
 
-[Link to Conversation Guide]
+\[Link to Conversation Guide\]
 
-[Participant Number], [Date & Time of Session]
+\[Participant Number\], \[Date & Time of Session\]
 
-[Link to Verbatim Notes]
+\[Link to Verbatim Notes\]
 
 Prepared By:
 
-[(if in person) Place photos of work session here Screenshots, faces Faces!!]
+\[\(if in person\) Place photos of work session here Screenshots, faces Faces!!\]
 
-# Participant Description
+## Participant Description
 
 Describe the participant in a few sentences, including their role within the system, why we’ve chosen them for a feedback session and relevant demographic information.
 
-# Key Findings
+## Key Findings
 
 List summary Info here. 3 to 4 bullet points. Consider adding research goals and putting relevant findings under each goal.
 
 1. ​
 
-# Convergences 
+## Convergences
 
 What themes or ideas do we see here that we’ve seen elsewhere?
 
 1. ​
 
-# Divergences
+## Divergences
 
-What’s different about this interview? (note what’s different about this interview can easily become a convergence later)
-
-1. ​
-
-# Key Quotes:
+What’s different about this interview? \(note what’s different about this interview can easily become a convergence later\)
 
 1. ​
 
-# (Video and Audio Snippets)
+## Key Quotes:
+
+1. ​
+
+## \(Video and Audio Snippets\)
 
 Prove It
 
 1. ​
 
-## Discussion
+### Discussion
 
 A discussion covering the following points:
 

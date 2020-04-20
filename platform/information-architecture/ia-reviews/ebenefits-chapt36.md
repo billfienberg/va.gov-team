@@ -1,66 +1,57 @@
 # IA Review and Recommendations
+
 **STATUS:**
 
-**Team:** 
+**Team:**
 
-**Product/Featue:** 
+**Product/Featue:**
 
 **Background/Context:**
 
-**IA Completed Date:** 
+**IA Completed Date:**
 
-**IA Request:** 
+**IA Request:**
 
-<hr>
+## IA Structure, URLs and Breadcrumbs 
 
-### IA Structure, URLs and Breadcrumbs <br>
-*Description of IA or link to site map documentation, the final URLs to be used and breadcrumb requirements. *
+_Description of IA or link to site map documentation, the final URLs to be used and breadcrumb requirements._ 
 
 **Approach:**
 
-- 
+* 
+| Page | URL | Breadcrumb |
+| :--- | :--- | :--- |
 
-
-Page | URL | Breadcrumb
---- | --- | ---
 
 **General Details**
-- Please connect with your writer/editor on the proper verbiage and capitalization of the last element of the breadcrumb
 
-<hr>
+* Please connect with your writer/editor on the proper verbiage and capitalization of the last element of the breadcrumb
 
-### Navigation Changes and Entry and Exit Points <br>
-*The primary entry points and changes to global navigation, as well as any potential crosslinking opportunities*
+## Navigation Changes and Entry and Exit Points 
 
-Priority | Placement | Description
---- | --- | ---
+_The primary entry points and changes to global navigation, as well as any potential crosslinking opportunities_
 
-***Priority:** Must = Required; Should = Strongly encouraged/best practice; Consider = Suggestion/at your discretion/possible enhancement* 
-
-<hr>
-
-### Redirects <br>
-*Identify if any redirects are needed.  This is not intended to be a complete and final list of redirect needs, but directional information only.*  
-
-- 
-
-Please submit a request for the redirect using the [Redirect Request Issue Template](https://github.com/department-of-veterans-affairs/va.gov-team/issues/new?assignees=mnorthuis&labels=content-ia-team%2C+ia&template=redirect-request.md&title=Redirect+Request) at least 2 weeks in advance. 
-*For more information, see the [Redirect Request Process](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/information-architecture/request-redirect.md).*
+| Priority | Placement | Description |
+| :--- | :--- | :--- |
 
 
-<hr>
+**\*Priority:** Must = Required; Should = Strongly encouraged/best practice; Consider = Suggestion/at your discretion/possible enhancement\*
 
-### Additional Details/Recommendations
+## Redirects 
 
-<hr>
-<hr>
+_Identify if any redirects are needed. This is not intended to be a complete and final list of redirect needs, but directional information only._
 
-### Meetings Notes and Background Info
+* Please submit a request for the redirect using the [Redirect Request Issue Template](https://github.com/department-of-veterans-affairs/va.gov-team/issues/new?assignees=mnorthuis&labels=content-ia-team%2C+ia&template=redirect-request.md&title=Redirect+Request) at least 2 weeks in advance. _For more information, see the_ [_Redirect Request Process_](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/information-architecture/request-redirect.md)_._
+
+## Additional Details/Recommendations
+
+## Meetings Notes and Background Info
 
 **4/10/2020 - Kick-off**
-- Education and Career counseling Application 8832
-- Rebranding to PCPG Personalized Career Planning and Guidance
-- Migrating this to VA.gov, per Steve just focusing on getting migrated over, not integrating with broader personalized experience
-- https://xd.adobe.com/view/f2e4cdec-1fa1-42ab-5cbf-e2a3c74c6663-84d5/
-- Additional content pages to consider: dependent benefits in careers, education hub pages, service member hub page
+
+* Education and Career counseling Application 8832
+* Rebranding to PCPG Personalized Career Planning and Guidance
+* Migrating this to VA.gov, per Steve just focusing on getting migrated over, not integrating with broader personalized experience
+* [https://xd.adobe.com/view/f2e4cdec-1fa1-42ab-5cbf-e2a3c74c6663-84d5/](https://xd.adobe.com/view/f2e4cdec-1fa1-42ab-5cbf-e2a3c74c6663-84d5/)
+* Additional content pages to consider: dependent benefits in careers, education hub pages, service member hub page
 

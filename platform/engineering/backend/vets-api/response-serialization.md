@@ -2,9 +2,9 @@
 
 ## Tooling
 
-Responses to requests must be JSON formatted.  To that end, we use `ActiveModel::Serializer` to consistently structure and serialize our endpoint responses.  
+Responses to requests must be JSON formatted. To that end, we use `ActiveModel::Serializer` to consistently structure and serialize our endpoint responses.
 
-This adheres to the JSON API specification.  It also ensures that endpoint responses will always follow the `"data": "attributes": ...` [schema pattern](http://jsonapi.org/format/#document-top-level).  
+This adheres to the JSON API specification. It also ensures that endpoint responses will always follow the `"data": "attributes": ...` [schema pattern](http://jsonapi.org/format/#document-top-level).
 
 For example, here is a sample response body:
 
@@ -24,7 +24,7 @@ For example, here is a sample response body:
 
 ## Creating a Serializer
 
-Serializers are defined in the `app/serializers` directory, and should be namespaced to the integration.  Serializers should only contain information relevant to the endpoint.
+Serializers are defined in the `app/serializers` directory, and should be namespaced to the integration. Serializers should only contain information relevant to the endpoint.
 
 Here is a sample model, and its associated serializer:
 
@@ -53,13 +53,11 @@ module MyIntegration
 end
 ```
 
-You'll note that the `:internal_rating` attribute was omitted from the serializer.  Reason being, it is not required for presentation to the end user.
+You'll note that the `:internal_rating` attribute was omitted from the serializer. Reason being, it is not required for presentation to the end user.
 
 ## Workflow
 
-Our standard is for calls to any External Service Clients {TODO - add content} to return native Ruby objects. This allows new
-endpoints and integrations to utilize existing clients, and aids the testing
-process.
+Our standard is for calls to any External Service Clients {TODO - add content} to return native Ruby objects. This allows new endpoints and integrations to utilize existing clients, and aids the testing process.
 
 The conversion of these Ruby objects to a JSON response is done in the controller.
 
@@ -93,22 +91,19 @@ module MyIntegration
     end
   end
 end
-
 ```
 
 ## Limiting Serialized Data
 
-Not all data returned by an External Service is necessary to include in
-an endpoint's response.
+Not all data returned by an External Service is necessary to include in an endpoint's response.
 
-For instance, personally identifiable information (PII) can present security concerns.  Making this data available may unnecessarily burden future auditing, in case of a breach.
+For instance, personally identifiable information \(PII\) can present security concerns. Making this data available may unnecessarily burden future auditing, in case of a breach.
 
 Additionally, large lists of ancillary details increase the response size, and negatively impact performance.
 
 For these reasons, be sure to only define attributes within the Serializer that are required for consumers.
 
-<hr>
-
 Back: [Vets API Request Processing](request-processing.md)
 
 Next: [Vets API Service Objects](service-objects.md)
+

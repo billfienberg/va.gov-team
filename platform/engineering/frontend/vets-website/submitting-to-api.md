@@ -1,6 +1,5 @@
 # Submitting your form to an API
 
-
 Once you've finished writing your form, you will want to set up the submission to a back-end API. You have a few options for handling this in our form system.
 
 ## Setting a submit URL
@@ -9,14 +8,14 @@ The primary option for setting up your form submission is to the set the `submit
 
 There are also some related configuration properties you may want to set:
 
-- `submitErrorText`: This lets you set some custom error text after our default server error message, which you can use to direct users to a specific help desk number or support avenue.
-- `trackingPrefix`: You likely already set this, but if you're at the point where you're submitting the form, you should make sure it's correct.
+* `submitErrorText`: This lets you set some custom error text after our default server error message, which you can use to direct users to a specific help desk number or support avenue.
+* `trackingPrefix`: You likely already set this, but if you're at the point where you're submitting the form, you should make sure it's correct.
 
 ## Customizing how your data is transformed
 
 You may want to customize the final data that you submit to the back-end API. You can do this with the `transformForSubmit` config property. This is a function that will receive the form data and the form config object. For example, one of our education forms does this:
 
-```js
+```javascript
 import { transformForSubmit } from '../../common/schemaform/helpers';
 
 export function transform(formConfig, form) {
@@ -35,7 +34,7 @@ It calls the default `transformForSubmit` function so that it does all the defau
 
 You also have the option of writing your own submit function and bypassing the default process entirely. You probably won't need to do this, but if you need to make multiple API calls or poll for a status, this might be the best option. The main requirement for using this function is that it needs to return a promise. If the promise rejects, an error state will be displayed. If the promise resolves, then the confirmation page will be shown. Here's a very simple example:
 
-```js
+```javascript
 import { transformForSubmit } from '../common/schemaform/helpers';
 
 function submit(form, formConfig) {
@@ -66,19 +65,18 @@ You can then set the `submit` property in the form config to this function.
 
 Some things to note:
 
-- Whatever is in a successful response will go into the Redux state at `form.submission.response`
-- The error message text is important; you need to start the message with `vets_server_error` to show the server error message and likewise `vets_client_error` for the client error message (which is an error on the user's browser, like the Internet being down). For example, here's the error shown for client errors:
+* Whatever is in a successful response will go into the Redux state at `form.submission.response`
+* The error message text is important; you need to start the message with `vets_server_error` to show the server error message and likewise `vets_client_error` for the client error message \(which is an error on the user's browser, like the Internet being down\). For example, here's the error shown for client errors:
 
-![](../../assets/client_error.png)
+![](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/assets/client_error.png)
 
 And here's the error message for a server error:
 
-![](../../assets/server_error.png)
+![](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/assets/server_error.png)
 
 As long as you return a promise and throw the expected errors, you can do whatever else you need to do in this submit function.
-
-<hr>
 
 Back: [Vets Website Writing Tests](writing-tests.md)
 
 Next: [Vets Website Save in Progress](save-in-progress.md)
+

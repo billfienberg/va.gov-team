@@ -1,3 +1,5 @@
+# issues-from-april-2018-foresee-data
+
 1. Often cited broken links, site errors inconsistency between eBenefits and vets.gov
 2. **Only about 1/2 of visitors to va.gov and VHA Medical centers sites accomplished what they wanted to do**
 3. Problem: education
@@ -13,3 +15,4 @@
    1. “a lot of problems signing into my eBenefits account. keep telling me user name or password was incorrect. Took me 4 attempts.” Sat: 44, 02/11/2018 
    2. “make passwords easier to use. There are too many rules, such as not being able to use dictionary words, etc. Its really hard for me to remember them, especially since they have to be changed every 90 days.” Sat: 78, 02/20/18 
    3. I don't come to this site often When I do I always have login issues due to the fact I don't have a need to use this site on a regular bases Lt me decide when to change my password I don't like it when a site tells me what I can and can't use as a password and when to change my password. I won't remember the password I just changed because of your criteria. It's my password.” Sat: 63, 03/14/18 
+

@@ -18,7 +18,7 @@ This is similar to what we do when we build a new form on VA.gov, for example. O
 2. Build intro page
 3. Build page 1
 4. Build page 2
-5. Build page 3 (etc)
+5. Build page 3 \(etc\)
 6. Connect form submission to API
 7. Build confirmation page
 
@@ -42,6 +42,7 @@ Similar to the above tip, focusing on addressing only the issues in one ticket c
 
 Sometimes you just won't be able to get your changes down to 400 or 500 lines. When that happens, you should do your best to provide extra support to reviewers, as well as accounting for the increase in turnaround time that a large PR will need. Some things to think about doing:
 
-- Make comments in the PR pointing to particular important changes that need reviews
-- Offer to talk through changes on a video call, so reviewers can ask questions quickly
-- Write more in depth descriptions of the changes and point out repetative changes that a reviewer can skim
+* Make comments in the PR pointing to particular important changes that need reviews
+* Offer to talk through changes on a video call, so reviewers can ask questions quickly
+* Write more in depth descriptions of the changes and point out repetative changes that a reviewer can skim
+

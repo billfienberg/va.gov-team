@@ -1,5 +1,8 @@
-## vets-api/app/controllers/v0/profile/emails_controller.rb
-````ruby
+# controller-route-serializer
+
+## vets-api/app/controllers/v0/profile/emails\_controller.rb
+
+```ruby
 module V0
   module Profile
     class EmailsController < ApplicationController
@@ -35,11 +38,11 @@ module V0
     end
   end
 end
-````
+```
 
+## vets-api/app/serializers/email\_serializer.rb
 
-## vets-api/app/serializers/email_serializer.rb
-````ruby
+```ruby
 class EmailSerializer < ActiveModel::Serializer
   attribute :email
   attribute :effective_at
@@ -73,11 +76,11 @@ class EmailSerializer < ActiveModel::Serializer
     object&.email_address&.dig 'effective_date'
   end
 end
-````
-
+```
 
 ## vets-api/config/routes.rb
-````ruby
+
+```ruby
 ...
   namespace :v0, defaults: { format: 'json' } do
     namespace :profile do
@@ -85,4 +88,5 @@ end
     end
   end
 ...
-````
+```
+

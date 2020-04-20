@@ -6,7 +6,6 @@ All endpoints exposed through Vets-API must be thoroughly documented with [Swagg
 * All input `parameters`
 * All possible success and error `responses`.
 
-
 A Swagger document is a computer-readable collection of documentation details for an API. Documentation callouts within Vets-API provide the information required to generate this [Vets-API document](https://dev-api.va.gov/v0/apidocs).
 
 The Vets-API developers use the [Swagger Blocks](https://github.com/fotinakis/swagger-blocks) gem as a DSL to define our Swagger documentation. This document will cover an example using that DSL.
@@ -17,6 +16,7 @@ There are two essential components to integrate documentation with the existing 
 * Include the documented class in the `SWAGGERED_DOCUMENTS` list
 
 ### Defining the Swagger document
+
 This example is defined inline with the controller
 
 ```ruby
@@ -80,8 +80,10 @@ module V0
   end
 end
 ```
+
 ### A note about `tags`
-Tags are used to group your endpoints with a service. It's important that tag names be unique and descriptive. Before you choose your tag names, check the [existing documentation](https://department-of-veterans-affairs.github.io/va-digital-services-platform-docs/api-reference/) for tag names (`authentication`, `user`, `profile`, etc) and ensure your tag names don't collide. A recommended approach for doing this is to namespace your tags with your integration name using dot notation. In the example above this would be `my_integration.facilities`. Each `operation` requires a `tag`. Tags can be reused across operations but it's not recommended to have multiple tags for a single operation.
+
+Tags are used to group your endpoints with a service. It's important that tag names be unique and descriptive. Before you choose your tag names, check the [existing documentation](https://department-of-veterans-affairs.github.io/va-digital-services-platform-docs/api-reference/) for tag names \(`authentication`, `user`, `profile`, etc\) and ensure your tag names don't collide. A recommended approach for doing this is to namespace your tags with your integration name using dot notation. In the example above this would be `my_integration.facilities`. Each `operation` requires a `tag`. Tags can be reused across operations but it's not recommended to have multiple tags for a single operation.
 
 ### Include the documented class in the `SWAGGERED_DOCUMENTS` list
 
@@ -93,18 +95,19 @@ Tags are used to group your endpoints with a service. It's important that tag na
       V0::MyIntegration::Widgets
     ]
 ...
-
 ```
 
 ## Viewing Documentation
+
 ### Online
+
 [Interactive documentation](https://department-of-veterans-affairs.github.io/va-digital-services-platform-docs/api-reference/) is available through Swagger UI.
 
 ### Local
-[Instructions](https://github.com/department-of-veterans-affairs/vets-api/tree/master/app/swagger) for viewing documentation locally in your development environment are available in the documentation repository's readme.
 
-<hr>
+[Instructions](https://github.com/department-of-veterans-affairs/vets-api/tree/master/app/swagger) for viewing documentation locally in your development environment are available in the documentation repository's readme.
 
 Back: [Vets API Authorization](authorization.md)
 
 Next: [Vets API Forms](forms.md)
+

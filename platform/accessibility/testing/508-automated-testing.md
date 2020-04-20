@@ -173,11 +173,11 @@ module.exports = E2eHelpers.createE2eTest(client => {
 
 ## Keyboard e2e helper api
 
-#### allyEvaluateCheckboxes
+### allyEvaluateCheckboxes
 
 Evaluate checkboxes for basic keyboard functionality. Each checkbox can receive keyboard focus by pressing TAB. Each checkbox can be toggled by pressing SPACE
 
-``` javascript 
+```javascript
 this.demoTest = function (client) {
   client.allyEvaluateCheckboxes([
     "input[type="checkbox"]#1",
@@ -187,35 +187,31 @@ this.demoTest = function (client) {
 };
 ```
 
-| param | type | description | 
-|----------|:-------------:|:-------------:|
-| selectorArray | string | The array of checkboxes by (CSS / Xpath) to be evaluated. | 
+| param | type | description |
+| :--- | :---: | :---: |
+| selectorArray | string | The array of checkboxes by \(CSS / Xpath\) to be evaluated. |
 | timeoutNum | number | Value in milliseconds to wait for a selector. Default is 2000. |
 
-
-
-#### allyEvaluateInput
+### allyEvaluateInput
 
 Evaluate inputs and textareas for basic keyboard functionality. We will ensure the input or textarea has focus, can take key entry, and returns the value we expect.
 
-``` javascript 
+```javascript
 this.demoTest = function (client) {
   client.allyEvaluateInput('selector', 'input text');
 };
 ```
 
-| param | type | description | 
-|----------|:-------------:|:-------------:|
-| input | string | The selector (CSS / Xpath) used to locate the element. | 
+| param | type | description |
+| :--- | :---: | :---: |
+| input | string | The selector \(CSS / Xpath\) used to locate the element. |
 | inputText | string | The text string that should be keyed into the input. |
 
-
-
-#### allyEvaluateModalWindow
+### allyEvaluateModalWindow
 
 Evaluate modal windows for basic keyboard open and close functionality.
 
-``` javascript 
+```javascript
 this.demoTest = function (client) {
   client
   .allyEvaluateModalWindow(
@@ -227,20 +223,19 @@ this.demoTest = function (client) {
 };
 ```
 
-| param | type | description | 
-|----------|:-------------:|:-------------:|
-| modalTrigger | string | The selector (CSS / Xpath) used to open the modal window. | 
-| modalElement | string | The selector (CSS / Xpath) of the modal container. |
-| modalCloseElement | string | The selector (CSS / Xpath) used to close the modal window. | 
+| param | type | description |
+| :--- | :---: | :---: |
+| modalTrigger | string | The selector \(CSS / Xpath\) used to open the modal window. |
+| modalElement | string | The selector \(CSS / Xpath\) of the modal container. |
+| modalCloseElement | string | The selector \(CSS / Xpath\) used to close the modal window. |
 | triggerKey | object | The client.Keys.KEY being pressed to open and close the modal window. Default key is ENTER. |
 | timeoutNum | number | Value in milliseconds to wait for a selector. Default is 2000. |
 
-
-#### allyEvaluateRadioButtons
+### allyEvaluateRadioButtons
 
 Evaluate radio buttons for basic forward keyboard functionality. Radio groups can receive keyboard focus by pressing TAB. Each radio button can be checked by pressing the DOWN or RIGHT arrow keys. Pass the optional boolean true to reverse the direction and evaluate radio buttons from bottom to top.
 
-``` javascript 
+```javascript
 this.demoTest = function (client) {
   client.allyEvaluateRadioButtons([
     "input[type="radio"]#1",
@@ -250,29 +245,27 @@ this.demoTest = function (client) {
 };
 ```
 
+| param | type | description |  |  |
+| :--- | :---: | :---: | :--- | :--- |
+| selectorArray | string | The array of radio buttons by \(CSS / Xpath\) to be evaluated. |  |  |
+| arrowPressed | object | Nightwatch Keys object. Expects ARROW\_DOWN |  | ARROW\_RIGHT. |
+| reversed | boolean | Will reverse the array order to work with ARROW\_UP and ARROW\_LEFT. |  |  |
+| timeoutNum | number | Value in milliseconds to wait for a selector. Default is 2000. |  |  |
 
-| param | type | description | 
-|----------|:-------------:|:-------------:|
-| selectorArray | string | The array of radio buttons by (CSS / Xpath) to be evaluated. | 
-| arrowPressed | object | Nightwatch Keys object. Expects ARROW_DOWN || ARROW_RIGHT. |
-| reversed | boolean | Will reverse the array order to work with ARROW_UP and ARROW_LEFT. | 
-| timeoutNum | number | Value in milliseconds to wait for a selector. Default is 2000. |
+### allyEvaluateSelectMenu
 
+Evaluate select menus for basic keyboard functionality. Each select can receive keyboard focus by pressing TAB. Select menus should open with SPACE press, and user should be able to enter keys. This is an imperfect approximation, but Nightwatch doesn't support arrow keys for traversing options in the open select.
 
-#### allyEvaluateSelectMenu
-
-Evaluate select menus for basic keyboard functionality. Each select can receive keyboard focus by pressing TAB. Select menus should open with SPACE press, and user should be able to enter keys. This is an imperfect  approximation, but Nightwatch doesn't support arrow keys for traversing options in the open select.
-
-``` javascript 
+```javascript
 this.demoTest = function (client) {
   client.allyEvaluateSelectMenu('selector', 'option text', 'option value');
 };
 ```
 
-
-| param | type | description | 
-|----------|:-------------:|:-------------:|
-| selectMenu | string | The selector (CSS / Xpath) used to locate the element. | 
-| optionText | string | The text of the <option> that should be selected. |
-| selectedOption | string | Value attribute of the <option> that should be selected. | 
+| param | type | description |
+| :--- | :---: | :---: |
+| selectMenu | string | The selector \(CSS / Xpath\) used to locate the element. |
+| optionText | string | The text of the  that should be selected. |
+| selectedOption | string | Value attribute of the  that should be selected. |
 | timeoutNum | number | Value in milliseconds to wait for a selector. Default is 2000. |
+

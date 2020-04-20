@@ -6,31 +6,31 @@ Calls to external service endpoints are done through service objects.
 
 The implementation of a service object includes the following dependencies:
 
-- [Service classes](#service-classes)
-- [Configuration classes](#configuration-classes)
-- [Response classes](#response-classes)
-- [Model classes](#model-classes)
-- [Relevant updates to the `config/settings.yml` file](#updating-the-config-settings)
+* [Service classes](service-objects.md#service-classes)
+* [Configuration classes](service-objects.md#configuration-classes)
+* [Response classes](service-objects.md#response-classes)
+* [Model classes](service-objects.md#model-classes)
+* [Relevant updates to the `config/settings.yml` file](service-objects.md#updating-the-config-settings)
 
 ## Service Classes
 
-There is a [`Common::Client::Base`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/client/base.rb) class that encapsulates our base logic for making and dealing with HTTP calls to external services.  
+There is a [`Common::Client::Base`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/client/base.rb) class that encapsulates our base logic for making and dealing with HTTP calls to external services.
 
-When implementing a new external service, you will create a new base service class for your external service.  This will inherit from `Common::Client::Base`.  
+When implementing a new external service, you will create a new base service class for your external service. This will inherit from `Common::Client::Base`.
 
 This new base service class will typically house any logic associated with customizing the:
 
-- HTTP calls
-- error handling
-- logging
+* HTTP calls
+* error handling
+* logging
 
-This new service class can also contain the actual service endpoints (i.e. `get_some_service`); however, it is more often the case that a new child service class will be created, that inherits from your new base class.  
+This new service class can also contain the actual service endpoints \(i.e. `get_some_service`\); however, it is more often the case that a new child service class will be created, that inherits from your new base class.
 
-This child class is typically where you will create the actual suite of service object endpoints (i.e. your `POST`s, `GET`s, etc.).
+This child class is typically where you will create the actual suite of service object endpoints \(i.e. your `POST`s, `GET`s, etc.\).
 
-#### Sample Implementation
+### Sample Implementation
 
-Let's say you are integrating an external service called "HealthCheck".  You would first create a new _base_ service class:
+Let's say you are integrating an external service called "HealthCheck". You would first create a new _base_ service class:
 
 ```ruby
 # lib/my_integration/health_check/service.rb
@@ -59,7 +59,7 @@ module MyIntegration
 end
 ```
 
-Hypothetically "HealthCheck" offers multiple services.  For example, a sub-service around a user's profile.  As such, you would create a new child service class for the service object endpoints:
+Hypothetically "HealthCheck" offers multiple services. For example, a sub-service around a user's profile. As such, you would create a new child service class for the service object endpoints:
 
 ```ruby
 # lib/my_integration/health_check/profile/service.rb
@@ -89,25 +89,24 @@ module MyIntegration
 end
 ```
 
-
 ## Configuration Classes
 
-Configuration follows a similar pattern to our service classes.  There is a [`Common::Client::Configuration::REST`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/client/configuration/rest.rb) class that encapsulates our base logic for HTTP client connection and settings. We use [Faraday](https://github.com/lostisland/faraday) as our HTTP client.
+Configuration follows a similar pattern to our service classes. There is a [`Common::Client::Configuration::REST`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/client/configuration/rest.rb) class that encapsulates our base logic for HTTP client connection and settings. We use [Faraday](https://github.com/lostisland/faraday) as our HTTP client.
 
-When implementing a new external service, you will create a new base configuration class for your external service.  This will inherit from `Common::Client::Configuration::REST`.  
+When implementing a new external service, you will create a new base configuration class for your external service. This will inherit from `Common::Client::Configuration::REST`.
 
 This new base service class will typically house any logic associated with customizing the:
 
-- Faraday connection object and settings
-- headers
+* Faraday connection object and settings
+* headers
 
-The external services root URL will be stored in the `config/setttings.yml` file.  This new configuration class can also contain the external service's base path, that comes off the root URL.  
+The external services root URL will be stored in the `config/setttings.yml` file. This new configuration class can also contain the external service's base path, that comes off the root URL.
 
 If there will be more than one base path for this service, it is typical to create a new child configuration class that inherits from your new base configuration class.
 
 This child class is where you still define your base path, and any other configuration that is unique to this child service.
 
-#### Sample Implementation
+### Sample Implementation
 
 Using the "HealthCheck" service, you would first create a new _base_ configuration class:
 
@@ -157,17 +156,16 @@ module MyIntegration
 end
 ```
 
-
 ## Response Classes
 
-Responses also follow a similar pattern to our service classes.  There is a [`Common::Models::Base`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/models/base.rb) class that encapsulates our base logic for defining attributes and serialization.  We use [Virtus](https://github.com/solnic/virtus) to define attributes on classes and modules.
+Responses also follow a similar pattern to our service classes. There is a [`Common::Models::Base`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/models/base.rb) class that encapsulates our base logic for defining attributes and serialization. We use [Virtus](https://github.com/solnic/virtus) to define attributes on classes and modules.
 
-When implementing a new external service, you will create a new base response class for your external service.  This will inherit from `Common::Models::Base`.  
+When implementing a new external service, you will create a new base response class for your external service. This will inherit from `Common::Models::Base`.
 
 This new base response class will typically house any logic associated with customizing the:
 
-- initialization
-- response statuses and checks
+* initialization
+* response statuses and checks
 
 The response class converts the raw response from the external service into a native Ruby object.
 
@@ -175,7 +173,7 @@ If there will be sub-services for this external service, it is typical to create
 
 This child class is where you will convert the response to Ruby, and leverage any new model classes that you create.
 
-#### Sample Implementation
+### Sample Implementation
 
 Using the "HealthCheck" service, you would first create a new _base_ response class:
 
@@ -241,12 +239,11 @@ module MyIntegration
 end
 ```
 
-
 ## Model Classes
 
-Models also follow a similar pattern to our service classes.  There is a [`Common::Models::Base`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/models/base.rb) class that encapsulates our base logic for defining attributes and serialization.  We use [Virtus](https://github.com/solnic/virtus) to define attributes on classes and modules.
+Models also follow a similar pattern to our service classes. There is a [`Common::Models::Base`](https://github.com/department-of-veterans-affairs/vets-api/blob/master/lib/common/models/base.rb) class that encapsulates our base logic for defining attributes and serialization. We use [Virtus](https://github.com/solnic/virtus) to define attributes on classes and modules.
 
-When implementing a new external service, you will create a new base models class for your external service.  This will require `Common::Models::Base`.  
+When implementing a new external service, you will create a new base models class for your external service. This will require `Common::Models::Base`.
 
 This new base model class will typically `include` all of the validation, serialization, and attribute libraries that will be used for all of your models.
 
@@ -254,7 +251,7 @@ These models are vehicles to convert responses received from an external service
 
 After you've created the base model class, you will then create any new children model classes that inherit from your new base model class.
 
-#### Sample Implementation
+### Sample Implementation
 
 Using the "HealthCheck" service, you would first create a new _base_ model class:
 
@@ -297,11 +294,11 @@ end
 
 ## Updating The Config Settings
 
-As this will be a brand new external service, you'll need to update our `config/settings.yml` file with the service's root URL.  You'll also include keys and values for any usage of `Settings` in your configuration classes.
+As this will be a brand new external service, you'll need to update our `config/settings.yml` file with the service's root URL. You'll also include keys and values for any usage of `Settings` in your configuration classes.
 
-#### Sample Implementation
+### Sample Implementation
 
-```
+```text
 # Settings for HealthCheck
 my_integration_health_check:
   url: https://health_check/api/v1
@@ -312,8 +309,7 @@ my_integration_health_check:
 
 See the [Settings Documentation](settings.md) for more details.
 
-<hr>
-
 Back: [Vets API Response Serialization](response-serialization.md)
 
 Next: [Vets API Settings](settings.md)
+

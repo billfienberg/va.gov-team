@@ -2,18 +2,13 @@
 
 ## Schemas
 
-Form Schemas are utilized by both Vets-API and Vets-Website, and allow the two
-systems to share the structure of a form. This involves specifying fields
-and types. Schemas are maintained in the [Vets-JSON-Schema
-Repository](https://github.com/department-of-veterans-affairs/vets-json-schema).
-Schemas should be defined for integrations that will process a form presented
-on Vets-Website.
+Form Schemas are utilized by both Vets-API and Vets-Website, and allow the two systems to share the structure of a form. This involves specifying fields and types. Schemas are maintained in the [Vets-JSON-Schema Repository](https://github.com/department-of-veterans-affairs/vets-json-schema). Schemas should be defined for integrations that will process a form presented on Vets-Website.
 
 Further Reading
 
-* [Form Tutorial - Basic](../../form-tutorial-basic.md)
-* [Form Tutorial - Intermediate](../../form-tutorial-intermediate.md)
-* [Form Tutorial - Advanced](../../form-tutorial-advanced.md)
+* [Form Tutorial - Basic](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/form-tutorial-basic.md)
+* [Form Tutorial - Intermediate](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/form-tutorial-intermediate.md)
+* [Form Tutorial - Advanced](https://github.com/billfienberg/va.gov-team/tree/5839d463da035612a60148d7f90403dd12c8107e/platform/engineering/form-tutorial-advanced.md)
 
 ## Model
 
@@ -50,8 +45,7 @@ class ClaimsBaseController < ApplicationController
 end
 ```
 
-<hr>
-
 Back: [Vets API Documentation](documentation.md)
 
 Next: [Vets API PDF Generation](pdf-generation.md)
+

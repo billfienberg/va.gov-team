@@ -9,13 +9,12 @@ Teams should provide a test credentials document for their project. This documen
 1. Markdown
    * Example: [Github test credentials template](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/accessibility/accessibility-test-credentials-template.md)
 
-
-
 ## Test Plan
 
 Teams should provide a test plan in a Github file, or a TestRail test case for their respective project. This test plan needs to be completed before the accessibility specialist can start their staging review. Delays in providing or finishing your test plan may delay the accessibility review and/or your launch date.
 
 1. **TestRail**
-   - Example: [TestRail VSP accessibility test plan template](https://dsvavsp.testrail.io/index.php?/suites/view/14&group_by=cases:section_id&group_order=asc)
+   * Example: [TestRail VSP accessibility test plan template](https://dsvavsp.testrail.io/index.php?/suites/view/14&group_by=cases:section_id&group_order=asc)
 2. **Markdown**
    * Example: [Github test plan template](https://github.com/department-of-veterans-affairs/va.gov-team/blob/master/platform/accessibility/accessibility-test-cases-template.md)
+

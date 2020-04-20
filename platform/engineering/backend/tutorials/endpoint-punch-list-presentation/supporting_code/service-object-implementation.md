@@ -1,5 +1,7 @@
+# service-object-implementation
 
 ## vets-api/lib/evss/pciu/service.rb
+
 ```ruby
 require 'common/client/base'
 
@@ -31,10 +33,12 @@ module EVSS
     end
   end
 end
-````
+`
+```
 
 ## vets-api/lib/evss/pciu/configuration.rb
-````ruby
+
+```ruby
 module EVSS
   module PCIU
     class Configuration < EVSS::Configuration
@@ -54,10 +58,11 @@ module EVSS
     end
   end
 end
-````
+```
 
 ## vets-api/lib/evss/configuration.rb
-````ruby
+
+```ruby
 require 'common/client/configuration/rest'
 
 module EVSS
@@ -80,19 +85,22 @@ module EVSS
     end
   end
 end
-````
+```
+
 ## config/initializers/breakers.rb
-````ruby
+
+```ruby
 services = [
 ...
   EVSS::Configuration.instance.breakers_service,
 ...
- 
-]
-````
 
-## vets-api/lib/evss/pciu/email_address_response.rb
-````ruby
+]
+```
+
+## vets-api/lib/evss/pciu/email\_address\_response.rb
+
+```ruby
 require 'evss/response'
 
 module EVSS
@@ -108,10 +116,11 @@ module EVSS
     end
   end
 end
-````
+```
 
 ## vets-api/config/settings.yml
-````yml
+
+```text
 ...
 # Settings for EVSS
 evss:
@@ -120,4 +129,5 @@ evss:
   mock_pciu: false
 
 ...
-````
+```
+

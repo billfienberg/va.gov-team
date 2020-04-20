@@ -10,13 +10,13 @@ The severity rubric aligns to both the [axe-core rule descriptions](https://gith
 
 ## Table of Contents
 
-* [Launch Blocking Issues](#launch-blocking-issues)
-  * [Defect 0: Potentially Harmful](#508-defect-0)
-  * [Defect 1: Critical](#508-defect-1)
-* [Post-launch Issues](#post-launch-issues)
-  * [Defect 2: Serious](#508-defect-2)
-  * [Defect 3: Minor](#508-defect-3)
-  * [Defect 4: Trivial](#508-defect-4)
+* [Launch Blocking Issues](defect-severity-rubric.md#launch-blocking-issues)
+  * [Defect 0: Potentially Harmful](defect-severity-rubric.md#508-defect-0)
+  * [Defect 1: Critical](defect-severity-rubric.md#508-defect-1)
+* [Post-launch Issues](defect-severity-rubric.md#post-launch-issues)
+  * [Defect 2: Serious](defect-severity-rubric.md#508-defect-2)
+  * [Defect 3: Minor](defect-severity-rubric.md#508-defect-3)
+  * [Defect 4: Trivial](defect-severity-rubric.md#508-defect-4)
 
 ## Launch Blocking Issues
 
@@ -24,16 +24,15 @@ The severity rubric aligns to both the [axe-core rule descriptions](https://gith
 
 `508-defect-0` and `508-defect-1` issues have the potential to make an application unusable for a significant group of users.
 
----
 ### 508-defect-0
 
 **❗️ Potentially Harmful. Must be fixed immediately.**
 
-These issues have the potential to cause life-threatening situations and should be be remediated before work starts or continues on `508-defect-1` issues. Our audience has a higher incidence of traumatic brain injury (TBI) and post-traumatic stress disorder (PTSD), so we need to correct these issues immediately.
+These issues have the potential to cause life-threatening situations and should be be remediated before work starts or continues on `508-defect-1` issues. Our audience has a higher incidence of traumatic brain injury \(TBI\) and post-traumatic stress disorder \(PTSD\), so we need to correct these issues immediately.
 
 #### Types of issues:
 
-* Applications must not have [high flicker rates](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) (could trigger epileptic seizures)
+* Applications must not have [high flicker rates](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html) \(could trigger epileptic seizures\)
   * [Three Flashes or Below Threshold: Understanding SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)
 * Motion or movement should not cover a high percentage of the screen. This could lead to possible [vestibular issues](https://a11yproject.com/posts/understanding-vestibular-disorders/).
   * [WCAG2.1 Understanding Success Criterion 2.2.2: Pause, Stop, Hide](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
@@ -43,7 +42,6 @@ These issues have the potential to cause life-threatening situations and should 
 * Users who have photosensitivity or seizure disorders
 * Users who have [vestibular issues](https://a11yproject.com/posts/understanding-vestibular-disorders/) like motion sickness
 
----
 ### 508-defect-1
 
 **❗️ Critical. Must be fixed before launch.**
@@ -65,15 +63,15 @@ These issues have the potential to severly disrupt the user experience and must 
   * [SortSite](https://www.powermapper.com/products/sortsite/)
   * [AATT](https://github.com/paypal/AATT) 
 * [Videos must have captioning](https://www.w3.org/WAI/perspective-videos/captions/)
-  * [Captions (Prerecorded): Understanding SC 1.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
+  * [Captions \(Prerecorded\): Understanding SC 1.2.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 * [Color contrast issues](https://webaim.org/articles/contrast/) must be corrected
-  * [Contrast (Minimum): Understanding SC 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+  * [Contrast \(Minimum\): Understanding SC 1.4.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 * [Form inputs must have semantic labels](https://www.w3.org/WAI/tutorials/forms/labels/)
   * [Labels or Instructions: Understanding SC 3.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 * [Content being added or removed from the page must announce a change to assistive devices](https://fae.disability.illinois.edu/rulesets/WIDGET_14/)
 * Improper `aria` attributes or missing IDs must be corrected. See the [rules of ARIA use](https://www.w3.org/TR/using-aria/#NOTES).
 * Elements that can receive focus must have a yellow focus halo. This includes buttons, links, form inputs, textareas, and custom components. The following CSS rule should be present on the element that has keyboard focus. See [WCAG2.1 Understanding Success Criteria 2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
-  
+
   ```css
   outline: 2px solid #f9c642;
   ```
@@ -92,7 +90,6 @@ These issues have the potential to severly disrupt the user experience and must 
 
 `508-defect-2` and `508-defect-3` issues have the potential to degrade the user experience and should be fixed as soon as possible. These issues may have a short or long time horizon; some are violations, others are suggested improvements.
 
----
 ### 508-defect-2
 
 **⚠️ Serious. Should be fixed in 1-2 sprints post-launch.**
@@ -101,25 +98,20 @@ These issues have the potential to disrupt the user experience and should be fix
 
 #### Types of issues:
 
-* Page `<title>` tags must update on every route (URL) change. This includes single-page apps (SPAs).
+* Page `<title>` tags must update on every route \(URL\) change. This includes single-page apps \(SPAs\).
   * `<h1>` should match the `<title>` or be included in the `<title>`
-    * Example title: Check your appeals status | VA.gov
+    * Example title: Check your appeals status \| VA.gov
     * Example heading: Check your appeals status
   * [Page Titled: Understanding SC 2.4.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 * [Zoomed layouts](https://www.w3.org/WAI/WCAG21/Understanding/reflow.html) must support use without horizontal scrolling, or have difficult to read text. Horizontal scrolling is allowed for data tables, images, or other rich media.
-
 * Color blindness issues must be corrected. A common example is color being used to distinguish links from plain text.
 * Labels or calls to action must be descriptive to assistive devices. Some examples include:
-
   * A button to edit a form in place. The button says "Edit", but doesn't answer "Edit...what?" to a screen reader. The user is asked to work back through the page and listen for a heading or key text to identify what this button might do.
-
   * A button labeled "Learn more" that expands an accordion. Again, screen reader users are left to figure out what they might be learning more about.
-
   * This issue is listed as a `508-defect-2` because non-descript labels can reduce the overall experience for screen reader users. These labels usually appear in repeated UI controls, increasing the cognitive load on users.
-
   * This issue can be remediated in a couple of ways:
 
-    ```html
+    ```markup
     /*
      * Best if you need to support language translation
      */
@@ -129,28 +121,25 @@ These issues have the potential to disrupt the user experience and should be fix
     </button>
     ```
 
-    ```html
+    ```markup
     /*
      * Less markup, but does not support language translation
      * https://adrianroselli.com/2019/11/aria-label-does-not-translate.html
      */
     <button aria-label="Edit street address">Edit</button>
     ```
+
   * Accessible labels must be included in visual labels
   * [WCAG2.1 Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
-
 * Applications must have a [logical source order](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
-
 * HTML should use meaningful landmarks. These include:
-
   * `<banner>`
   * `<navigation>`
   * `<main>`
   * `<aside>`
   * `<footer>`
   * divs with `role` attributes.
-
-* HTML should have properly nested headings. Adding an `<h4>` as the first heading underneath an `<h2>` is an example of improper nesting. The [WebAIM WAVE](https://wave.webaim.org/) or [headingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) browser plugins  provide visual representations of heading nesting.
+* HTML should have properly nested headings. Adding an `<h4>` as the first heading underneath an `<h2>` is an example of improper nesting. The [WebAIM WAVE](https://wave.webaim.org/) or [headingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en) browser plugins provide visual representations of heading nesting.
 
 #### Potential impact:
 
@@ -160,7 +149,6 @@ These issues have the potential to disrupt the user experience and should be fix
 * Users who are hard of hearing or deaf
 * Users with short-term memory or other cognitive issues
 
----
 ### 508-defect-3
 
 **⚠️ Minor. Should be fixed in 1-3 sprints post-launch.**
@@ -169,7 +157,7 @@ These issues have the potential to disrupt the user experience and should be fix
 
 #### Types of issues:
 
-* [Invalid HTML](https://validator.w3.org/) (non-semantic, badly formed) must be fixed
+* [Invalid HTML](https://validator.w3.org/) \(non-semantic, badly formed\) must be fixed
   * [Parsing: Understanding SC 4.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html)
 * Pages should have a way to [skip navigation blocks](https://webaim.org/techniques/skipnav/) of three or more links
   * [Bypass Blocks: Understanding SC 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
@@ -182,7 +170,6 @@ These issues have the potential to disrupt the user experience and should be fix
 * Users who have low-vision, partial vision, or are blind
 * Users who navigate by keyboard
 
----
 ### 508-defect-4
 
 **✔️ Trivial. Consider fixing or exploring in 2-4 sprints post-launch.**
@@ -191,7 +178,7 @@ These issues and items to consider can improve the experience for assistive tech
 
 #### Types of issues:
 
-* Less semantic HTML (using `<ul>` instead of `<ol>` for sequential instructions, for instance) should be fixed
+* Less semantic HTML \(using `<ul>` instead of `<ol>` for sequential instructions, for instance\) should be fixed
   * [Parsing: Understanding SC 4.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html)
 * Best practice warnings in early release tools like [axe-coconut](https://www.deque.com/axe/axe-for-web/early-release/) should be fixed
 
@@ -202,3 +189,4 @@ These issues and items to consider can improve the experience for assistive tech
 * Users who have low-vision, partial vision, or are blind
 * Users who are hard of hearing or deaf
 * Users with short-term memory or other cognitive issues
+

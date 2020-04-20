@@ -10,7 +10,7 @@ To address this issue, we have the ability to write "migrations" for form data. 
 
 Migrations go in the form config object:
 
-```js
+```javascript
 const formConfig = {
    ...
    version: 1,
@@ -29,7 +29,7 @@ const formConfig = {
 
 We typically start at version 0 and increment each time we need to add a migration. Migrations are functions that get `formData`, `metadata`, and `formId` as arguments. And they must return the `formData` and `metadata`, with any changes that they have made. For example, here is a migration that the health care application uses to convert an old url:
 
-```js
+```javascript
 ({ formData, metadata }) => {
   const url = metadata.returnUrl || metadata.return_url;
   let newMetadata = metadata;
@@ -42,11 +42,11 @@ We typically start at version 0 and increment each time we need to add a migrati
 }
 ```
 
-If the current return URL (which is the URL a user will return to when the load a saved form) matches the outdated one, we update it. The `formData` is not changed in this case.
+If the current return URL \(which is the URL a user will return to when the load a saved form\) matches the outdated one, we update it. The `formData` is not changed in this case.
 
 Another example from the health care application was to fix a bug in our form structure:
 
-```js
+```javascript
 (savedData) => {
   const newData = savedData;
   newData.formData = _.unset('isSpanishHispanicLatino', savedData.formData);
@@ -64,8 +64,7 @@ In this example, we're moving an incorrectly located `isSpanishHispanicLatino` f
 
 Writing migrations is not very common, but you may need to do it if you end up modifying a form that's already in production.
 
-<hr>
-
 Back: [Vets Website Save in Progress](save-in-progress.md)
 
 Next: [Vets Website Form Map](form-map.md)
+
