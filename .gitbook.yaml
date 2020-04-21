@@ -1,4 +1,5 @@
-root: ./platform
+root: .
 
 structure:  
     readme: ./platform/README.md
+    summary: ./SUMMARY.md
